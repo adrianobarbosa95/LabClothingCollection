@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { ResetPassComponent } from './components/reset-pass/reset-pass.component';
 import { CadastroUsuarioComponent } from './components/cadastro-usuario/cadastro-usuario.component';
+import { MenuLateralComponent } from './components/menu-lateral/menu-lateral.component';
+import { FullComponent } from './layouts/full/full.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ResetPassComponent,
-    CadastroUsuarioComponent
+    CadastroUsuarioComponent,
+    MenuLateralComponent,
+    FullComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
