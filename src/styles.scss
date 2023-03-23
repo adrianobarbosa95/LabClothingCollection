@@ -38,7 +38,7 @@ body {
   // top: 30%;
   background: #fff;
   border-radius: 8px;
-padding: 3%;
+padding: 3% 3% 2%;
  
 }
 
@@ -55,6 +55,17 @@ margin-top: 13%;
   src: url('assets/font/inter/Inter.ttf');
 }
 
+.titlebtn{
+width: 100%;
+ text-align: center;
+} 
+
+.seta{
+  position: absolute;
+  padding-top: 3px;
+ 
+
+}
 
 .title-card {
  
@@ -66,7 +77,13 @@ margin-top: 13%;
   color: #2C2C2C;
 
 }
-
+input::placeholder{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #B4B6C1!important;
+}
 .subtitle-card {
   /* subheader */
   font-family: 'Inter';
@@ -104,4 +121,5 @@ padding-top: 3%;
   color: #B4B6C1!important;
   width: 100%;
 }
-
+ 
+ 
