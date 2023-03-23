@@ -1,1 +1,107 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  text-align: center;
+  font-family: 'Inter';
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #F2F5FF;
+}
+
+.box {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+//LOGIN
+
+.logo-login {
+  //  margin-top: 8%;
+  height: 35.98px;
+  width: 36px;
+  margin-bottom: 3%;
+}
+
+.card-login {
+  /* box_login */
+  align-items: center;
+  text-align: center;
+  position: flex;
+  width: 30%;
+  height: auto;
+  // height: 41%;
+  // left: 34%;
+  // top: 30%;
+  background: #fff;
+  border-radius: 8px;
+padding: 3%;
+ 
+}
+
+.card-login input[type='submit']{
+  background: #0073CF;
+border-radius: 6px;
+width: 100%;
+color: #fff;
+margin-top: 13%;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('assets/font/inter/Inter.ttf');
+}
+
+
+.title-card {
+ 
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 24px;
+  // line-height: 29px;
+  /* identical to box height */
+  color: #2C2C2C;
+
+}
+
+.subtitle-card {
+  /* subheader */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #B4B6C1;
+}
+.links{
+padding-top: 3%;
+
+}
+.links .redefenir{
+  padding-top: 13%;
+}
+.links a{
+  color: #277FFE!important;
+}
+
+
+.form-login-card {
+  
+  margin-top: 10%;
+  padding: 1%;
+
+}
+
+.input-login {
+  /* input */
+  margin-bottom: 5%;
+  border: 1px solid #EBF0FA;
+  border-radius: 6px;
+  box-sizing: border-box;
+  /* Auto layout */
+  color: #B4B6C1!important;
+  width: 100%;
+}
+
