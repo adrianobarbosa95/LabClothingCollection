@@ -9,6 +9,8 @@ import { CadastroUsuarioComponent } from './components/cadastro-usuario/cadastro
 import { MenuLateralComponent } from './components/menu-lateral/menu-lateral.component';
 import { FullComponent } from './layouts/full/full.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     CadastroUsuarioComponent,
     MenuLateralComponent,
     FullComponent,
-    NavbarComponent
+    NavbarComponent,
+    DashboardComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
