@@ -14,6 +14,8 @@ import { CardComponent } from './components/card/card.component';
 import { TableBudgetComponent } from './components/table-budget/table-budget.component';
 import { CollectionListComponent } from './components/collection-list/collection-list.component';
 import { ModelListComponent } from './components/model-list/model-list.component';
+import { FormCollectionComponent } from './components/form-collection/form-collection.component';
+import { FormModelComponent } from './components/form-model/form-model.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { ModelListComponent } from './components/model-list/model-list.component
     CardComponent,
     TableBudgetComponent,
     CollectionListComponent,
-    ModelListComponent
+    ModelListComponent,
+    FormCollectionComponent,
+    FormModelComponent
   ],
   imports: [
     BrowserModule,
