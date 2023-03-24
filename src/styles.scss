@@ -23,7 +23,7 @@ body {
   //  margin-top: 8%;
   height: 35.98px;
   width: 36px;
-  margin-bottom: 3%;
+  margin-bottom: 2%;
 }
 
 .card-login {
@@ -62,7 +62,7 @@ body {
 }
 
 .btn-cadastro-aluno {
-  margin-top: 8% !important;
+  margin-top: 7% !important;
 }
 
 .btn-simple {
@@ -149,6 +149,7 @@ input::placeholder, select {
 
 .links a {
   color: #277FFE !important;
+  text-decoration: none;
 }
 
 
@@ -227,7 +228,9 @@ input::placeholder, select {
   margin-bottom: 30%;
 }
 
-
+.link{
+  cursor: pointer;
+}
 
 
 //NAVBAR
@@ -256,6 +259,7 @@ position: fixed;
 
 .nav-right {
   padding-right: 50px;
+  padding-bottom: 25px;
 }
 
 .img-nav {
@@ -413,7 +417,7 @@ th {
   gap: 40px;
 }
 .disabled{
-  background: #EBEBEB;
+  background: #EBEBEB!important;
   color: #A098AE;
 }
 

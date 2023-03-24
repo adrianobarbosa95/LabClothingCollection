@@ -3,17 +3,17 @@
   <div class="card-login">
     <h1 class="title-card">Sign Upg</h1>
     <h2 class="subtitle-card important">Insira seus dados para criar uma conta</h2>
-    <form class="form-login-card" action="">
-      <input type="text" class="form-control input-login" placeholder="Nome">
-      <input type="text" class="form-control input-login" placeholder="Empresa">
-      <input type="text" class="form-control input-login" placeholder="CNPJ">
-      <input type="text" class="form-control input-login" placeholder="Informe seu e-mail">
+    <form class="form-login-card"  (ngSubmit) = "onSubmit()" [formGroup]="form" action="">
+      <input type="text" class="form-control input-login"  formControlName="nome" [(ngModel)]="nome" placeholder="Nome">
+      <input type="text" class="form-control input-login"  formControlName="empresa" [(ngModel)]="empresa" placeholder="Empresa">
+      <input type="text" class="form-control input-login"  formControlName="cnpj" [(ngModel)]="cnpj" placeholder="CNPJ">
+      <input type="text" class="form-control input-login"  formControlName="email" [(ngModel)]="email" placeholder="Informe seu e-mail">
       <div class="width-2">
      
-        <input type="text" class="form-control input-login width-2r"  placeholder="Senha">
+        <input type="text" class="form-control input-login width-2r"    formControlName="senha" [(ngModel)]="senha" placeholder="Senha">
       
   
-        <input type="text" class="form-control input-login width-2r"  placeholder="Confirmar senha">
+        <input type="text" class="form-control input-login width-2r"  formControlName="confirmPassword" [(ngModel)]="confirmPassword" placeholder="Confirmar senha">
  
  
     </div>
@@ -22,7 +22,7 @@
     </form>
   </div>
   <div class="links">
-  <h2 class="subtitle-card important">Já possui uma uma conta? <a>Realizar login</a></h2>
+  <h2 class="subtitle-card important">Já possui uma uma conta? <a routerLink="/entrar">Realizar login</a></h2>
    
   </div>
   </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reset-pass',
@@ -7,4 +8,22 @@ import { Component } from '@angular/core';
 })
 export class ResetPassComponent {
 
+  form!: FormGroup;
+  email!: string;
+  enviado = false;
+
+  constructor (private fb: FormBuilder) {
+ 
+    this.form = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+    });
+    
+  }
+  
+onSubmit(){
+  // if(this.form.valid){}
+  
+    return this.enviado = this.form.valid;
+  
+}
 }

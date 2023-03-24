@@ -19,11 +19,13 @@ const routes: Routes = [
       {path:'modelos', component: ModelListComponent},
       {path:'colecoes/criar', component: FormCollectionComponent },
       {path:'modelos/criar', component: FormModelComponent },
+      
     ]
   },
 
   {path:'entrar', component: LoginComponent },
   {path:'recuperar-senha', component: ResetPassComponent },
+  {path:'cadastro', component: CadastroUsuarioComponent },
   
 
 

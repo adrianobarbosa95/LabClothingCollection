@@ -5,15 +5,15 @@
 <div class="card-login">
   <h1 class="title-card">Sign In</h1>
   <h2 class="subtitle-card important">Insira suas credenciais para acessar sua conta</h2>
-  <form class="form-login-card" action="">
-    <input type="text" class="form-control input-login" placeholder="Informe seu e-mail">
-    <input type="text" class="form-control input-login" placeholder="Informe sua senha">
-  <input type="submit" class="form-control" value="Entrar">
+  <form class="form-login-card" action="" (ngSubmit) = "onSubmit()" [formGroup]="form">
+    <input type="email" class="form-control input-login" placeholder="Informe seu e-mail" formControlName="email" [(ngModel)]="email">
+    <input type="text" class="form-control input-login" placeholder="Informe sua senha" formControlName="senha" [(ngModel)]="senha">
+  <input type="submit" class="form-control" [disabled]="!form.valid"  value="Entrar">
   </form>
  
 </div>
 <div class="links">
-<h2 class="subtitle-card important pass">Esqueceu sua senha? <a>Redefinir senha</a></h2>
-<h2 class="subtitle-card important redefenir">Ainda não tem uma conta? <a>Cadastre-se</a></h2>
+<h2 class="subtitle-card important pass">Esqueceu sua senha? <a routerLink="/recuperar-senha">Redefinir senha</a></h2>
+<h2 class="subtitle-card important redefenir">Ainda não tem uma conta? <a routerLink="/cadastro" >Cadastre-se</a></h2>
 </div>
 </div>

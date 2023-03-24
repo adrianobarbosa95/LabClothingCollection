@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -16,6 +15,8 @@ import { CollectionListComponent } from './components/collection-list/collection
 import { ModelListComponent } from './components/model-list/model-list.component';
 import { FormCollectionComponent } from './components/form-collection/form-collection.component';
 import { FormModelComponent } from './components/form-model/form-model.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -31,12 +32,15 @@ import { FormModelComponent } from './components/form-model/form-model.component
     TableBudgetComponent,
     CollectionListComponent,
     ModelListComponent,
+
     FormCollectionComponent,
-    FormModelComponent
+    FormModelComponent,
   ],
   imports: [
+    FormsModule, ReactiveFormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
