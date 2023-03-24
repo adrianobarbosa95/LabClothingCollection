@@ -10,13 +10,14 @@ const routes: Routes = [
   {
     path:'', component: FullComponent, children:
     [
-      {path:'entrar', component: LoginComponent },
-      {path:'recuperar-senha', component: ResetPassComponent },
-      {path:'cadastrar-usuario', component: CadastroUsuarioComponent },
+      
       {path:'dashboard', component: DashboardComponent},
  
     ]
   },
+  {path:'entrar', component: LoginComponent },
+  {path:'recuperar-senha', component: ResetPassComponent },
+  {path:'cadastrar-usuario', component: CadastroUsuarioComponent },
 
 
 ];

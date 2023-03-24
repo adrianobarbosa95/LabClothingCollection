@@ -11,6 +11,7 @@ import { FullComponent } from './layouts/full/full.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CardComponent } from './components/card/card.component';
+import { TableBudgetComponent } from './components/table-budget/table-budget.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CardComponent } from './components/card/card.component';
     FullComponent,
     NavbarComponent,
     DashboardComponent,
-    CardComponent
+    CardComponent,
+    TableBudgetComponent
   ],
   imports: [
     BrowserModule,

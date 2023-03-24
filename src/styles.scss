@@ -31,7 +31,7 @@ body {
   align-items: center;
   text-align: center;
   position: flex;
-  width: 30%;
+  width: 32%;
   height: auto;
   // height: 41%;
   // left: 34%;
@@ -103,17 +103,29 @@ input::placeholder {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 14px ;
   color: #B4B6C1;
+}
+.important{
+  font-weight: 400 !important;
+  font-size: 14px  !important;
 }
 
 .links {
-  padding-top: 3%;
-
+  padding-top: 2%;
+  font-weight: 400;
+  color: #989898;
 }
 
 .links .redefenir {
-  padding-top: 13%;
+  padding-top: 8%;
+  color: #989898;
+
+}
+.links .pass {
+ 
+  color: #989898;
+
 }
 
 .links a {
@@ -158,7 +170,7 @@ input::placeholder {
   flex-direction: column;
   // align-items: center;
   text-align: left;
-  padding: 51px 40px;
+  padding: 25px 30px;
   gap: 20px;
   position: absolute;
   width: 20%;
@@ -166,6 +178,7 @@ input::placeholder {
   background: #FFFFFF;
   border-right: 1.75px solid #F0F0F0;
   z-index: 9999;
+
 }
 
 .title-menu-lateral {
@@ -185,9 +198,10 @@ input::placeholder {
 }
 
 .img-logo-menu {
-  width: 168px;
-  height: 32px;
+  width: 130px;
+  height: auto;
   text-align: center;
+  margin-bottom: 30%;
 }
 
 
@@ -197,7 +211,7 @@ input::placeholder {
 
 .nav {
   width: 100%;
-  height: 80px;
+  height: 70px;
   display: flex;
   flex-direction: row;
   justify-content: right;
@@ -205,7 +219,7 @@ input::placeholder {
   align-items: center;
   background: #FFFFFF;
   box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.12);
-  
+
 }
 
 .item-navbar {
@@ -217,56 +231,143 @@ input::placeholder {
   text-align: center;
 }
 
-.nav-right{
+.nav-right {
   padding-right: 50px;
 }
-.img-nav{
-  width: 40px;
-  height: 40px;
+
+.img-nav {
+  width: 35px;
+  height: 35px;
 }
 
 //dashboard
 
-.corpo{
-width: 80%;
+.corpo {
+  width: 80%;
+
   
   float: left;
-margin-left: 20%;
-text-align: left;
- padding: 2%;
- height: 100%;
+  margin-left: 20%;
+  text-align: left;
+  padding-top: 1.5%;
+  padding-left: 2%;
+  margin-top: 1%;
+  height: 100%;
+  padding-right: 2%;
+
 }
-.title-dash{
+
+.title-dash {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 600;
-  font-size: 28px;
+  font-size: 24px;
   color: #2C2C2C;
+
 }
 
-.card{
-
+.cards {
+  margin-top: 4%;
   /* Card Dashboard */
+  gap: 40px;
+  width: 24vw;
+  // height: 100%;
+  background: #FFFFFF;
+  border-radius: 20px;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  padding: 3% 7%;
+}
 
+.card-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50%;
 
-/* Auto layout */
+}
 
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-padding: 25px;
-gap: 40px;
+.subtitle-card-h3 {
 
-width: 350px;
-height: 180px;
+  color: #2C2C2C;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+}
 
-background: #FFFFFF;
-border-radius: 20px;
+.title-menu {
+  font-size: 14px;
+  font-weight: 400;
+  color: #B4B6C1;
+  margin-top: 20%;
+}
 
-/* Inside auto layout */
+.subtitle-card {
+  font-size: 18px;
+  font-weight: 600;
+  color: #595959;
+  margin-top: 2%;
+}
 
-flex: none;
-order: 0;
-flex-grow: 0;
+.font16 {
+  font-size: 18px !important;
+}
+
+.dados-card {
+  margin-top: 10%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.subtitle-card-h4 {
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 14px;
+  color: #B4B6C1;
+  padding-top: 4%;
+
+}
+
+.alternative-text {
+  text-align: right;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+
+  font-size: 14px;
+  color: #56976E;
+
+}
+
+.table-bb {
+  background: #FFFFFF;
+  border-radius: 9px;
+  margin-top: 3%;
+  padding: 3%;
+}
+
+.subtitle-table{
+
+  margin-top: 0;
+}
+
+tr{
+  height: 50px;
+  
+color: #9395A3;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+text-align: center;
+}
+th{
+  color: #2C2C2C;
+
 }
