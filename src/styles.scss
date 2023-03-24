@@ -53,13 +53,24 @@ body {
 
 .card-login input[type='submit'],
 .btn-blue,
-.btn:hover {
+.btns .btn:hover {
   background: #0073CF;
   border-radius: 6px;
   width: 100%;
   color: #fff;
   margin-top: 13%;
-
+}
+.btn-cadastro-aluno{
+  margin-top: 8% !important;
+}
+.btn-simple{
+  background: #0073CF;
+  border-radius: 6px;
+  color: #fff;
+ width: auto;
+ padding-left: 3%;
+ padding-right: 3%;
+ margin-bottom: 2%!important;
 }
 
 @font-face {
@@ -102,9 +113,12 @@ input::placeholder {
   /* subheader */
   font-family: 'Inter';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 400f;
   font-size: 14px ;
   color: #B4B6C1;
+}
+.imp-reset{
+  color: #B4B6C1!important;
 }
 .important{
   font-weight: 400 !important;
@@ -244,8 +258,6 @@ input::placeholder {
 
 .corpo {
   width: 80%;
-
-  
   float: left;
   margin-left: 20%;
   text-align: left;
@@ -358,7 +370,7 @@ input::placeholder {
 }
 
 tr{
-  height: 50px;
+  height: 60px;
   
 color: #9395A3;
 font-family: 'Inter';
@@ -366,8 +378,17 @@ font-style: normal;
 font-weight: 400;
 font-size: 16px;
 text-align: center;
+
 }
 th{
   color: #2C2C2C;
+
+}
+
+.colle-flex{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
 }

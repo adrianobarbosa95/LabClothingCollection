@@ -12,6 +12,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CardComponent } from './components/card/card.component';
 import { TableBudgetComponent } from './components/table-budget/table-budget.component';
+import { CollectionListComponent } from './components/collection-list/collection-list.component';
+import { ModelListComponent } from './components/model-list/model-list.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { TableBudgetComponent } from './components/table-budget/table-budget.com
     NavbarComponent,
     DashboardComponent,
     CardComponent,
-    TableBudgetComponent
+    TableBudgetComponent,
+    CollectionListComponent,
+    ModelListComponent
   ],
   imports: [
     BrowserModule,
