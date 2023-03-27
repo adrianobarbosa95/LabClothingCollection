@@ -10,17 +10,7 @@
       "id": 1
     },
     {
-      "nome": "Refletivo",
-      "responsavel": "TERRA",
-      "tipo": "VERAO",
-      "orcamento": 20000,
-      "bordado": "1995",
-      "colecao": "NICK",
-      "estampa": "NICK",
-      "id": 2
-    },
-    {
-      "nome": "dgdfgd",
+      "nome": "assssssssssssssss",
       "tipo": "biquini",
       "responsavel": "ghgfghf",
       "colecao": "Selecionar coleção",
@@ -67,22 +57,13 @@
       "id": 8
     },
     {
-      "nome": "dddddddd",
-      "responsavel": "ddddddddddddddddd",
-      "estacao": "ddddddddddd",
-      "orcamento": 1111111,
-      "ano": 1111,
-      "marca": "ddddddddddddddd",
+      "nome": "q",
+      "responsavel": "q",
+      "estacao": "q",
+      "orcamento": 111,
+      "ano": 33,
+      "marca": "q",
       "id": 9
-    },
-    {
-      "nome": "fsdfsdfsd",
-      "responsavel": "fsdfdfsd",
-      "estacao": "fddsfdfds",
-      "orcamento": 233242,
-      "ano": 3332,
-      "marca": "fsdfsdfsf",
-      "id": 10
     }
   ],
   "usuarios": [
@@ -103,6 +84,15 @@
       "cnpj": "123465789101214",
       "confirmPassword": "12345678",
       "id": 2
+    },
+    {
+      "email": "adrianobarbosa95@gmail.com",
+      "senha": "81140420",
+      "nome": "Adriano",
+      "empresa": "Terra",
+      "cnpj": "12345678971548",
+      "confirmPassword": "81140420",
+      "id": 3
     }
   ]
 }

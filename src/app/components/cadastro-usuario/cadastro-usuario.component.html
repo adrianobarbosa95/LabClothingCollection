@@ -3,26 +3,97 @@
   <div class="card-login">
     <h1 class="title-card">Sign Upg</h1>
     <h2 class="subtitle-card important">Insira seus dados para criar uma conta</h2>
-    <form class="form-login-card"  (ngSubmit) = "onSubmit()" [formGroup]="form" action="">
-      <input type="text" class="form-control input-login"  formControlName="nome" [(ngModel)]="nome" placeholder="Nome">
-      <input type="text" class="form-control input-login"  formControlName="empresa" [(ngModel)]="empresa" placeholder="Empresa">
-      <input type="text" class="form-control input-login"  formControlName="cnpj" [(ngModel)]="cnpj" placeholder="CNPJ">
-      <input type="text" class="form-control input-login"  formControlName="email" [(ngModel)]="email" placeholder="Informe seu e-mail">
-      <div class="width-2">
-     
-        <input type="password" class="form-control input-login width-2r"    formControlName="senha" [(ngModel)]="senha" placeholder="Senha">
+    <form class="form-login-card needs-validation" novalidate (ngSubmit)="onSubmit()" [formGroup]="form" action=""
+      #formDir="ngForm">
+
+
+
+      <div class="input-group has-validation">
+        <input type="text" class="form-control input-login"
+          [class.is-invalid]="form.controls?.['nome']?.errors && formDir?.['submitted']" formControlName="nome"
+          [(ngModel)]="nome" placeholder="Nome">
+        <ng-container *ngIf="form.controls?.['nome']?.errors && formDir?.['submitted']">
+          <span class="invalid-feedback mb-4" *ngIf="form.controls?.['nome']?.errors">
+            Campo obrigatório
+          </span>
+        </ng-container>
+      </div>
+
+
       
-  
-        <input type="password" class="form-control input-login width-2r"  formControlName="confirmPassword" [(ngModel)]="confirmPassword" placeholder="Confirmar senha">
+      <div class="input-group has-validation">
+        <input type="text" class="form-control input-login"
+          [class.is-invalid]="form.controls?.['empresa']?.errors && formDir?.['submitted']" formControlName="empresa"
+          [(ngModel)]="empresa" placeholder="Empresa">
+        <ng-container *ngIf="form.controls?.['empresa']?.errors && formDir?.['submitted']">
+          <span class="invalid-feedback mb-4" *ngIf="form.controls['empresa'].errors">
+            Campo obrigatório
+          </span>
+        </ng-container>
+      </div>
+
+     
+      <div class="input-group has-validation">
+        <input type="text" class="form-control input-login"
+          [class.is-invalid]="form.controls?.['cnpj']?.errors && formDir?.['submitted']" formControlName="cnpj"
+          [(ngModel)]="cnpj" placeholder="CNPJ">
+        <ng-container *ngIf="form.controls?.['cnpj']?.errors && formDir?.['submitted']">
+          <span class="invalid-feedback mb-4" *ngIf="form.controls['cnpj'].errors">
+            Campo obrigatório - Minimo 14 caracter
+          </span>
+        </ng-container>
+      </div>
+
+
+      <div class="input-group has-validation">
+        <input type="text" class="form-control input-login"
+          [class.is-invalid]="form.controls?.['email']?.errors && formDir?.['submitted']" formControlName="email"
+          [(ngModel)]="email" placeholder="Email">
+        <ng-container *ngIf="form.controls?.['email']?.errors && formDir?.['submitted']">
+          <span class="invalid-feedback mb-4" *ngIf="form.controls['email'].errors">
+            Campo Email obrigatório
+          </span>
+        </ng-container>
+      </div>
  
+
+
+
+      <div class="input-group has-validation">
+
+        <div class="width-2">
+
+            <input type="password" class="form-control input-login width-2r" formControlName="senha" [(ngModel)]="senha"
+            placeholder="Senha"   [class.is-invalid]="form.controls?.['senha']?.errors && formDir?.['submitted']">
+           
+            <input type="password" class="form-control input-login width-2r"
+            [class.is-invalid]="form.controls?.['confirmPassword']?.errors && formDir?.['submitted']" formControlName="confirmPassword"
+            [(ngModel)]="confirmPassword" placeholder="Confirmar senha">
+        
+
+        </div>
+
+        <ng-container *ngIf="form.controls?.['confirmPassword']?.errors && formDir?.['submitted']">
+          <p class=" mb-4 w-100 error" *ngIf="form.controls['confirmPassword'].errors">
+           <small>As senhas devem coresponderem e ter minimo de 8 caracteres. </small> 
+          </p>
+        </ng-container>
+        
+
+      </div>
  
-    </div>
-  
-    <input type="submit" class="form-control btn-cadastro-aluno" value="Criar Conta">
+
+
+
+       
+
+
+
+      <input type="submit" class="form-control btn-cadastro-aluno" value="Criar Conta">
     </form>
   </div>
   <div class="links">
-  <h2 class="subtitle-card important">Já possui uma uma conta? <a routerLink="/entrar">Realizar login</a></h2>
-   
+    <h2 class="subtitle-card important">Já possui uma uma conta? <a routerLink="/entrar">Realizar login</a></h2>
+
   </div>
-  </div>
+</div>

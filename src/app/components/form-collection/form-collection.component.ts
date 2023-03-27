@@ -17,11 +17,12 @@ export class FormCollectionComponent  implements OnInit{
   colecao!: Colecao;
   rota:any;
 
+    myModal :any; 
 
 
  
 constructor (private fb:FormBuilder, private user: UserPipe, private colecao_service:ColecaoService, private router:Router) {
-  
+
   this.form = fb.group({
 
     nome: ['', [Validators.required]],
@@ -40,6 +41,7 @@ constructor (private fb:FormBuilder, private user: UserPipe, private colecao_ser
 }
   
   async ngOnInit(): Promise<void> {
+   
     
   if(this.rota[2] === 'editar'){
    
@@ -63,10 +65,11 @@ constructor (private fb:FormBuilder, private user: UserPipe, private colecao_ser
     
   }
   excluir(){
-
+if(confirm("Tem certeza que realmente deseja excluir?")){
     this.colecao_service.excluirColecao(this.rota[3]);
     this.router.navigate(['/colecoes']);
   }
+}
 
 }
 

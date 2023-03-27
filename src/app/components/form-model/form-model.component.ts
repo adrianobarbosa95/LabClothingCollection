@@ -65,9 +65,9 @@ export class FormModelComponent implements OnInit{
       
     }
     excluir(){
-  
+      if(confirm("Tem certeza que realmente deseja excluir?")){
       this.modelo_service.excluirModelo(this.rota[3]);
       this.router.navigate(['/modelos']);
     }
-  
+    }
 }

@@ -29,7 +29,7 @@
         <input type="text" class="form-control input-login " [class.is-invalid]="form.controls['senha'].errors" placeholder="Informe sua senha" formControlName="senha"
           [(ngModel)]="senha">
         <span class="invalid-feedback mb-3" *ngIf="form.controls['senha'].errors">
-          Minimo 8 caracter!
+          Mínimo 8 caracteres!
         </span>
         </div>
         <h2 *ngIf="logado" class="error" for="">{{logado}}</h2>
