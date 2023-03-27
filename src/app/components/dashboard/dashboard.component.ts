@@ -25,7 +25,7 @@ export class DashboardComponent {
       this.colecoes = res;
       this.colecoes.forEach((colecao => { this.somaColecao += Number.parseFloat(colecao.orcamento) }));
       this.title = ['Coleções', 'Modelos', "Orçamento Médio (R$)"];
-      this.valor = [this.colecoes.length, this.modelos.length, this.somaColecao / this.colecoes.length];
+      this.valor = [this.colecoes.length, this.modelos.length, (this.somaColecao / this.colecoes.length).toFixed(2)];
       this.comparacao = [false, false, true];
 
     });

@@ -18,7 +18,7 @@ export class AuthService {
 
   async loggin(email: string, senha: string) {
 
-  return this._httpClient.get<Usuario[]>(this.url).subscribe(
+    return this._httpClient.get<Usuario[]>(this.url).subscribe(
       (users) => {
         const encontrado = users.some(user =>
           user.email === email && user.senha === senha
@@ -29,21 +29,21 @@ export class AuthService {
           this.local.setItem('logado', JSON.stringify(true));
           this.local.setItem('email', JSON.stringify(email));
           this.router.navigate(['/dashboard']);
-         
-        } else {
-          alert('verifique e tente novamente');
-          
-          }
 
- 
-        
-        
-      } 
-       
+        } else {
+          // alert('verifique e tente novamente');
+
+        }
+
+
+
+
+      }
+
 
     );
 
-    
+
   }
 
 

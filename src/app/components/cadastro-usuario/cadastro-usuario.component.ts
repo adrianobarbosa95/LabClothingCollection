@@ -13,12 +13,12 @@ import { Usuario } from 'src/app/models/usuario';
 })
 export class CadastroUsuarioComponent {
   form!: FormGroup;
-  email: string = 'teste@tes.com';
-  senha: string = '12345678910';
-  nome: string ='terra';
-  empresa: string = 'baiana';
-  cnpj: string = '123465789101214';
-  confirmPassword : string = '12345678910';
+  email!: string;
+  senha!: string;
+  nome!: string;
+  empresa!: string;
+  cnpj!: string;
+  confirmPassword!:string;
 
   url = 'http://localhost:3000/usuarios';
 
@@ -47,7 +47,9 @@ onSubmit(){
      firstValueFrom(this._httpClient.post<Usuario>(this.url, usuario) );
   this.router.navigate(['/dashboard']);
   }
-
+else{
+  
+}
    
 }
 

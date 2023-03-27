@@ -1,13 +1,14 @@
 <div class="corpo">
 
-  <h1 class="title-dash">Nome</h1>
+  <h1 class="title-dash" *ngIf="rota[2] === 'criar'">Criar Modelo</h1>
+  <h1 class="title-dash" *ngIf="rota[2] === 'editar'">Editar Modelo</h1>
 
   <div class="table-bb">
-    <form class="p-3 px-5 center" action="" >
+    <form class="p-3 px-5 center" action="" (ngSubmit) = "onSubmit()" [formGroup]="form" >
 
       <div class="width-2">
-        <input type="text" class="form-control input-login width-2r-45" placeholder="Nome do Modelo">
-        <select class="form-select input-login width-2r-45">
+        <input type="text" class="form-control input-login width-2r-45"  [(ngModel)]="modelo.nome" formControlName="nome" placeholder="Nome do Modelo">
+        <select class="form-select input-login width-2r-45" [(ngModel)]="modelo.tipo" formControlName="tipo">
           <option selected>Tipo do Modelo</option>
           <option value="bermuda">bermuda</option>
           <option value="biquini">biquini</option>
@@ -22,13 +23,13 @@
          
       </div>
       <div class="width-2">
-        <select class="form-select input-login width-2r-45">
+        <select class="form-select input-login width-2r-45" [(ngModel)]="modelo.colecao" formControlName="colecao">
           <option selected>Selecionar coleção</option>
           <option *ngFor="let colecao of colecoes" value="{{colecao.nome}}">{{colecao.nome}}</option>
            
         </select>
         
-        <input type="text" class="form-control input-login width-2r-45" placeholder="Responsável pelo modelo">
+        <input type="text" class="form-control input-login width-2r-45" [(ngModel)]="modelo.responsavel" formControlName="responsavel" placeholder="Responsável pelo modelo">
       </div>
 
       <div class="width-2">
@@ -38,11 +39,11 @@
           <h2 class="h2-radios" for="">Possui bordado?</h2>
           <div  class="radios" >
           <label class="">
-            <input type="radio" name="bordado" />
+            <input type="radio" name="bordado" value="Sim" [(ngModel)]="modelo.bordado" formControlName="bordado" />
             Sim
           </label>
            <label class="">
-            <input type="radio" name="bordado" />
+            <input type="radio" name="bordado" value="Não" [(ngModel)]="modelo.bordado" formControlName="bordado"/>
             Não
           </label>
         </div>
@@ -52,11 +53,11 @@
           <h2 class="h2-radios" for="">Possui estampa?</h2>
           <div  class="radios" >
           <label class="">
-            <input type="radio" name="estampa" />
+            <input type="radio" name="estampa" value="Sim" [(ngModel)]="modelo.estampa" formControlName="estampa"/>
            Sim
           </label>
            <label class="">
-            <input type="radio" name="estampa" />
+            <input type="radio" name="estampa"  value="Não" [(ngModel)]="modelo.estampa" formControlName="estampa" />
             Não
           </label>
         </div>
@@ -66,10 +67,10 @@
 
       <div class="btns-form">
         
-        <div class="excluir">
+        <div *ngIf="rota[2] === 'editar'" (click)="excluir()" class="excluir">
         
-        <input type="button" class="form-control btn-simple btn-danger-form btn-form" value="Excluir"> </div>
-        <input type="submit" class="form-control btn-simple btn-form disabled" value="Cancelar">
+        <input type="button" class="form-control btn-simple btn-danger-form btn-form"  value="Excluir"> </div>
+        <input type="button" routerLink="/dashboard"  class="form-control btn-simple btn-form disabled" value="Cancelar">
         <input type="submit" class="form-control btn-simple btn-form" value="Salvar">
       </div>
     </form>

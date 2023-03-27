@@ -14,6 +14,7 @@ import { ModeloService } from 'src/app/services/modelo.service';
 })
 export class TableBudgetComponent {
   colecoes!: Colecao[];  
+  colecoesCompletas!: Colecao[];  
   modelos!: Modelo[];
 rota!:any;
 
@@ -22,7 +23,10 @@ rota!:any;
     colecao.listarColecoes().then((res) =>
       this.colecoes = res
     );
-    modelo.listarModelos().then((res) =>
+    colecao.obterTodasColecoes().then((res) =>
+    this.colecoesCompletas = res
+  );
+    modelo.obterTodosModelos().then((res) =>
       this.modelos = res
     );
     this.rota = this.router.url.split('/')[1];

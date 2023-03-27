@@ -2,12 +2,11 @@
   "modelos": [
     {
       "nome": "Refletivo",
+      "tipo": "bolsa",
       "responsavel": "TERRA",
-      "tipo": "VERAO",
-      "orcamento": 20000,
-      "bordado": "1995",
-      "colecao": "NICK",
-      "estampa": "NICK",
+      "colecao": "dddddddd",
+      "bordado": "Não",
+      "estampa": "Não",
       "id": 1
     },
     {
@@ -19,6 +18,15 @@
       "colecao": "NICK",
       "estampa": "NICK",
       "id": 2
+    },
+    {
+      "nome": "dgdfgd",
+      "tipo": "biquini",
+      "responsavel": "ghgfghf",
+      "colecao": "Selecionar coleção",
+      "bordado": "Não",
+      "estampa": "Não",
+      "id": 3
     }
   ],
   "colecoes": [
@@ -57,6 +65,24 @@
       "ano": 1585,
       "marca": "todas",
       "id": 8
+    },
+    {
+      "nome": "dddddddd",
+      "responsavel": "ddddddddddddddddd",
+      "estacao": "ddddddddddd",
+      "orcamento": 1111111,
+      "ano": 1111,
+      "marca": "ddddddddddddddd",
+      "id": 9
+    },
+    {
+      "nome": "fsdfsdfsd",
+      "responsavel": "fsdfdfsd",
+      "estacao": "fddsfdfds",
+      "orcamento": 233242,
+      "ano": 3332,
+      "marca": "fsdfsdfsf",
+      "id": 10
     }
   ],
   "usuarios": [

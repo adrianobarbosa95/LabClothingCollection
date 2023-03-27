@@ -13,7 +13,7 @@ import { FullComponent } from './layouts/full/full.component';
 
 const routes: Routes = [
   {
-    path:'', component: FullComponent, //canActivate: [AuthGuard],
+    path:'', component: FullComponent, canActivate: [AuthGuard],
     
     children:
     [

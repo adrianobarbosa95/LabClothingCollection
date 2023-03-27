@@ -1,4 +1,4 @@
-  <h2 class="subtitle-card subtitle-table">Maiores Orçamentos</h2>
+  <h2  *ngIf="rota =='dashboard'" class="subtitle-card subtitle-table">Maiores Orçamentos</h2>
 <table class="table">
   <thead>
     <tr *ngIf="rota =='colecoes' || rota =='dashboard'">
@@ -24,7 +24,7 @@
   </thead>
   <tbody>
 
-    <ng-container *ngIf="rota =='colecoes' || rota =='dashboard'">
+    <ng-container *ngIf="rota =='dashboard'">
     <tr routerLink="/colecoes/editar/{{colecao.id}}" *ngFor="let colecao of colecoes" >
  
       <td>{{colecao.nome}}</td>
@@ -35,6 +35,18 @@
 
     </tr>
     </ng-container>
+
+    <ng-container *ngIf="rota =='colecoes'">
+      <tr routerLink="/colecoes/editar/{{colecao.id}}" *ngFor="let colecao of colecoesCompletas" >
+   
+        <td>{{colecao.nome}}</td>
+        <td>{{colecao.responsavel}}</td>
+        <td>{{colecao.estacao}} {{colecao.ano}}</td>
+        <td>{{colecao.marca}}</td>  <!-- modelos -->
+        <td>{{colecao.orcamento}}</td>
+  
+      </tr>
+      </ng-container>
  
     <ng-container *ngIf="rota =='modelos'">
       <tr routerLink="/modelos/editar/{{modelo.id}}" *ngFor="let modelo of modelos" >

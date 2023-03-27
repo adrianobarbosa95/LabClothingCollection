@@ -16,6 +16,7 @@ export class LoginComponent {
   form!: FormGroup;
   email: string = 'admin@admin.com';
   senha: string ='12345678';
+  invalido = false;
 
   logado !: string;
  
@@ -31,7 +32,8 @@ export class LoginComponent {
 
     if (this.form.valid) {
       
-      this.logado = await this.auth.loggin(this.email, this.senha) ? "": "verifique os dados e tente novamente"; 
+      // this.logado = await this.auth.loggin(this.email, this.senha) ? "": "verifique os dados e tente novamente"; 
+      this.invalido = await this.auth.loggin(this.email, this.senha) ? true : false; 
  
     }  
   }
