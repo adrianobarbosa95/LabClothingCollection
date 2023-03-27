@@ -16,6 +16,11 @@ import { ModelListComponent } from './components/model-list/model-list.component
 import { FormCollectionComponent } from './components/form-collection/form-collection.component';
 import { FormModelComponent } from './components/form-model/form-model.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { DbService } from './services/db.service';
+import { UserPipe } from './pipes/user.pipe';
+ 
+ 
 
 
 @NgModule({
@@ -32,17 +37,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TableBudgetComponent,
     CollectionListComponent,
     ModelListComponent,
-
     FormCollectionComponent,
     FormModelComponent,
+    UserPipe,
+ 
+    
   ],
   imports: [
     FormsModule, ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,  
 
   ],
-  providers: [],
+  providers: [DbService, UserPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

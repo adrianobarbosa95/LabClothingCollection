@@ -1,40 +1,36 @@
 <div class="corpo">
 
-  <h1 class="title-dash">Nome</h1>
-
+  <h1 class="title-dash" *ngIf="rota[2] === 'criar'">Criar Coleção</h1>
+  <h1 class="title-dash" *ngIf="rota[2] === 'editar'">Editar Coleção</h1>
+ 
   <div class="table-bb">
-    <form class="p-3 px-5 center" action="">
+    <form class="p-3 px-5 center" action="" (ngSubmit) = "onSubmit()" [formGroup]="form" >
 
       <div class="width-2">
-        <input type="text" class="form-control input-login width-2r-45" placeholder="Nome da Coleção">
-        <input type="text" class="form-control input-login width-2r-45" placeholder="Responsável pela coleção">
-
-
+        <input type="text" class="form-control input-login width-2r-45" [(ngModel)]="colecao.nome" formControlName="nome" placeholder="Nome da Coleção">
+        <input type="text" class="form-control input-login width-2r-45" [(ngModel)]="colecao.responsavel" formControlName="responsavel" placeholder="Responsável pela coleção">
+   
       </div>
       <div class="width-2">
-        <input type="text" class="form-control input-login width-2r-45" placeholder="Para qual estação?">
-        <input type="text" class="form-control input-login width-2r-45" placeholder="Para qual marca você está criando?">
-      </div>
-
-      <div class="width-2">
-        <input type="text" class="form-control input-login width-2r-45" placeholder="Qual é o orçamento desta coleção?">
-        <input type="text" class="form-control input-login width-2r-45" placeholder="Ano de Lançamento">
+        <input type="text" class="form-control input-login width-2r-45" [(ngModel)]="colecao.estacao" formControlName="estacao" placeholder="Para qual estação?">
+        <input type="text" class="form-control input-login width-2r-45" [(ngModel)]="colecao.marca" formControlName="marca" placeholder="Para qual marca você está criando?">
       </div>
 
       <div class="width-2">
+        <input type="number" class="form-control input-login width-2r-45" [(ngModel)]="colecao.orcamento" formControlName="orcamento" placeholder="Qual é o orçamento desta coleção?">
+        <input type="number" class="form-control input-login width-2r-45" [(ngModel)]="colecao.ano" formControlName="ano" placeholder="Ano de Lançamento">
+      </div>
 
-
-
+      <div class="width-2">
 
       </div>
       <img src="assets/img/ilustracao.png" alt="">
       <div class="btns-form">
 
-        <div class="excluir">
-
+        <div  *ngIf="rota[2] === 'editar'" class="excluir">
           <input type="button" class="form-control btn-simple btn-danger-form btn-form" value="Excluir">
         </div>
-        <input type="submit" class="form-control btn-simple btn-form disabled" value="Cancelar">
+        <input type="button" routerLink="/dashboard" class="form-control btn-simple btn-form disabled" value="Cancelar">
         <input type="submit" class="form-control btn-simple btn-form" value="Salvar">
       </div>
     </form>

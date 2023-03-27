@@ -1,0 +1,79 @@
+{
+  "modelos": [],
+  "colecoes": [
+    {
+      "nome": "Refletivo",
+      "responsavel": "TERRA",
+      "estacao": "VERAO",
+      "orcamento": 20000,
+      "ano": 1995,
+      "marca": "NICK",
+      "id": 1
+    },
+    {
+      "nome": "terra",
+      "responsavel": "shakh",
+      "estacao": "ghhhh",
+      "orcamento": 1165,
+      "ano": 45466,
+      "marca": "jkhkjhk",
+      "id": 2
+    },
+    {
+      "nome": "terra",
+      "responsavel": "shakh",
+      "estacao": "ghhhh",
+      "orcamento": 1165,
+      "ano": 45466,
+      "marca": "jkhkjhk",
+      "id": 3
+    },
+    {
+      "nome": "terra",
+      "responsavel": "shakh",
+      "estacao": "ghhhh",
+      "orcamento": 1165,
+      "ano": 45466,
+      "marca": "jkhkjhk",
+      "id": 4
+    },
+    {
+      "nome": "tttetett",
+      "responsavel": "teete",
+      "estacao": "5664",
+      "orcamento": 656,
+      "ano": 565,
+      "marca": "45645",
+      "id": 5
+    },
+    {
+      "nome": "LuS",
+      "responsavel": "Lucas de Souza",
+      "estacao": "Inverno",
+      "orcamento": 445895,
+      "ano": 2023,
+      "marca": "C&A",
+      "id": 6
+    }
+  ],
+  "usuarios": [
+    {
+      "email": "admin@admin.com",
+      "senha": "123456789",
+      "nome": "terra",
+      "empresa": "baiana",
+      "cnpj": "123465789101214",
+      "confirmPassword": "123456789",
+      "id": 1
+    },
+    {
+      "email": "admin@admin.com",
+      "senha": "12345678",
+      "nome": "terra",
+      "empresa": "baiana",
+      "cnpj": "123465789101214",
+      "confirmPassword": "12345678",
+      "id": 2
+    }
+  ]
+}
