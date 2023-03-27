@@ -3,7 +3,7 @@
   <h1 class="title-dash">Nome</h1>
 
   <div class="table-bb">
-    <form class="p-3 px-5 center" action="">
+    <form class="p-3 px-5 center" action="" >
 
       <div class="width-2">
         <input type="text" class="form-control input-login width-2r-45" placeholder="Nome do Modelo">
@@ -24,15 +24,8 @@
       <div class="width-2">
         <select class="form-select input-login width-2r-45">
           <option selected>Selecionar coleção</option>
-          <option value="bermuda">bermuda</option>
-          <option value="biquini">biquini</option>
-          <option value="bolsa">bolsa</option>
-          <option value="boné">boné</option>
-          <option value="calça">calça</option>
-          <option value="calçados">calçados</option>
-          <option value="camisa">camisa</option>
-          <option value="chapéu">chapéu</option>
-          <option value="saia">saia</option>
+          <option *ngFor="let colecao of colecoes" value="{{colecao.nome}}">{{colecao.nome}}</option>
+           
         </select>
         
         <input type="text" class="form-control input-login width-2r-45" placeholder="Responsável pelo modelo">
@@ -45,12 +38,12 @@
           <h2 class="h2-radios" for="">Possui bordado?</h2>
           <div  class="radios" >
           <label class="">
-            <input type="radio" name="radio" />
-            sim
+            <input type="radio" name="bordado" />
+            Sim
           </label>
            <label class="">
-            <input type="radio" name="radio" />
-            não
+            <input type="radio" name="bordado" />
+            Não
           </label>
         </div>
         </div>
@@ -59,12 +52,12 @@
           <h2 class="h2-radios" for="">Possui estampa?</h2>
           <div  class="radios" >
           <label class="">
-            <input type="radio" name="radio" />
-            sim
+            <input type="radio" name="estampa" />
+           Sim
           </label>
            <label class="">
-            <input type="radio" name="radio" />
-            não
+            <input type="radio" name="estampa" />
+            Não
           </label>
         </div>
         </div>

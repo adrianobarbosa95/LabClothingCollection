@@ -1,12 +1,12 @@
-<div class="cards">
-  <h2 class="subtitle-card">Coleções</h2>
-  <div class="dados-card">
-     <h3 class="subtitle-card-h3">25</h3>
 
-     <div class="alternative-text">
-      <img src="assets/img/seta-up.png" alt=""> 25%
-     <h4 class="subtitle-card-h4">Comparado com 01/23</h4>
+<div class="cards">
+  <h2 class="subtitle-card">{{title}}</h2>
+  <div class="dados-card">
+     <h3 class="subtitle-card-h3">{{valor}}</h3>
+     <div class="alternative-text" *ngIf="comparacao">
+     <img src="assets/img/seta-up.png" alt=""> 25%
+     <h4 class="subtitle-card-h4"> Comparado com 01/23</h4>
     </div>
     </div>
- 
 </div>
+

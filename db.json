@@ -1,5 +1,26 @@
 {
-  "modelos": [],
+  "modelos": [
+    {
+      "nome": "Refletivo",
+      "responsavel": "TERRA",
+      "tipo": "VERAO",
+      "orcamento": 20000,
+      "bordado": "1995",
+      "colecao": "NICK",
+      "estampa": "NICK",
+      "id": 1
+    },
+    {
+      "nome": "Refletivo",
+      "responsavel": "TERRA",
+      "tipo": "VERAO",
+      "orcamento": 20000,
+      "bordado": "1995",
+      "colecao": "NICK",
+      "estampa": "NICK",
+      "id": 2
+    }
+  ],
   "colecoes": [
     {
       "nome": "Refletivo",
@@ -11,16 +32,7 @@
       "id": 1
     },
     {
-      "nome": "terra",
-      "responsavel": "shakh",
-      "estacao": "ghhhh",
-      "orcamento": 1165,
-      "ano": 45466,
-      "marca": "jkhkjhk",
-      "id": 2
-    },
-    {
-      "nome": "terra",
+      "nome": "terrasanta",
       "responsavel": "shakh",
       "estacao": "ghhhh",
       "orcamento": 1165,
@@ -29,31 +41,22 @@
       "id": 3
     },
     {
-      "nome": "terra",
-      "responsavel": "shakh",
-      "estacao": "ghhhh",
-      "orcamento": 1165,
-      "ano": 45466,
-      "marca": "jkhkjhk",
-      "id": 4
-    },
-    {
-      "nome": "tttetett",
-      "responsavel": "teete",
-      "estacao": "5664",
-      "orcamento": 656,
-      "ano": 565,
-      "marca": "45645",
-      "id": 5
-    },
-    {
       "nome": "LuS",
       "responsavel": "Lucas de Souza",
       "estacao": "Inverno",
-      "orcamento": 445895,
+      "orcamento": 400000,
       "ano": 2023,
       "marca": "C&A",
       "id": 6
+    },
+    {
+      "nome": "nenhuma",
+      "responsavel": "alguem",
+      "estacao": "advinhe",
+      "orcamento": 1000,
+      "ano": 1585,
+      "marca": "todas",
+      "id": 8
     }
   ],
   "usuarios": [

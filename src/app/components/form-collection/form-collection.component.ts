@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Colecao } from 'src/app/models/colecao';
@@ -11,12 +11,15 @@ import { ColecaoService } from 'src/app/services/colecao.service';
   templateUrl: './form-collection.component.html',
   styleUrls: ['./form-collection.component.scss']
 })
-export class FormCollectionComponent {
+export class FormCollectionComponent  implements OnInit{
 
   form!: FormGroup;
   colecao!: Colecao;
   rota:any;
 
+
+
+ 
 constructor (private fb:FormBuilder, private user: UserPipe, private colecao_service:ColecaoService, private router:Router) {
   
   this.form = fb.group({
@@ -35,17 +38,34 @@ constructor (private fb:FormBuilder, private user: UserPipe, private colecao_ser
   //  tis.colecao.responsavel = this.user.transform(JSON.parse(localStorage.getItem('email') ?? 'email'));
  this.rota = this.router.url.split('/');
 }
+  
+  async ngOnInit(): Promise<void> {
+    
+  if(this.rota[2] === 'editar'){
+   
+    this.form.setValue(await this.colecao_service.buscarColecao(this.rota[3]));
+     
+  }
+
+  }
+
+
   onSubmit(){
 
     if(this.form.valid && this.rota[2] === 'criar'){
-      console.log(this.form.value);
+ 
       this.colecao_service.cadastrarColecao(this.form.value);
       this.router.navigate(['/colecoes']);
+    } else if(this.form.valid && this.rota[2] === 'editar'){
+      this.colecao_service.atualizarColecao(this.form.value, this.rota[3] );
+      this.router.navigate(['/colecoes']);
     }
-else {
-  console.log('erro na validacao');
-  
-}
+    
+  }
+  excluir(){
+
+    this.colecao_service.excluirColecao(this.rota[3]);
+    this.router.navigate(['/colecoes']);
   }
 
 }

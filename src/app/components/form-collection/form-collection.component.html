@@ -27,7 +27,7 @@
       <img src="assets/img/ilustracao.png" alt="">
       <div class="btns-form">
 
-        <div  *ngIf="rota[2] === 'editar'" class="excluir">
+        <div  *ngIf="rota[2] === 'editar'" (click)="excluir()" class="excluir">
           <input type="button" class="form-control btn-simple btn-danger-form btn-form" value="Excluir">
         </div>
         <input type="button" routerLink="/dashboard" class="form-control btn-simple btn-form disabled" value="Cancelar">
