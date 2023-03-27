@@ -14,12 +14,17 @@ import { ModeloService } from 'src/app/services/modelo.service';
 export class FormModelComponent implements OnInit{
   colecoes!: Colecao[];
   modelos!: Modelo[];
-  modelo!: Modelo;
+  nome!: string;
+  tipo!: string;
+  responsavel!:string;
+  colecao !: string;
+  bordado!:string;
+  estampa!:string;
 
   form!: FormGroup;
   rota:any;
-  constructor(private colecao: ColecaoService, private modelo_service: ModeloService,  private router: Router, private fb:FormBuilder) {
-    this.colecao.obterTodasColecoes().then((res) =>
+  constructor(private colecao_service: ColecaoService, private modelo_service: ModeloService,  private router: Router, private fb:FormBuilder) {
+    this.colecao_service.obterTodasColecoes().then((res) =>
     this.colecoes = res);
     this.form = fb.group({
   
@@ -33,7 +38,8 @@ export class FormModelComponent implements OnInit{
   
     });
 
-    this.modelo = this.form.value; 
+    
+    
     this.rota = this.router.url.split('/');
   }
 
@@ -44,24 +50,25 @@ export class FormModelComponent implements OnInit{
     async ngOnInit(): Promise<void> {
       
     if(this.rota[2] === 'editar'){
-     
+      // this.modelo = this.form.value;
       this.form.setValue(await this.modelo_service.buscarModelo(this.rota[3]));
        
-    }
+    }   
   
 
   }
 
     onSubmit(){
-
+      
       if(this.form.valid && this.rota[2] === 'criar'){
-   
+        
         this.modelo_service.cadastrarModelo(this.form.value);
         this.router.navigate(['/modelos']);
       } else if(this.form.valid && this.rota[2] === 'editar'){
+
         this.modelo_service.atualizarModelo(this.form.value, this.rota[3] );
         this.router.navigate(['/modelos']);
-      }
+      }  
       
     }
     excluir(){

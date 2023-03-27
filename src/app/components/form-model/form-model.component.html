@@ -4,12 +4,15 @@
   <h1 class="title-dash" *ngIf="rota[2] === 'editar'">Editar Modelo</h1>
 
   <div class="table-bb">
-    <form class="p-3 px-5 center" action="" (ngSubmit) = "onSubmit()" [formGroup]="form" >
+    <form class="p-3 px-5 center" action="" (ngSubmit)="onSubmit()" [formGroup]="form" #formDir="ngForm">
 
       <div class="width-2">
-        <input type="text" class="form-control input-login width-2r-45"  [(ngModel)]="modelo.nome" formControlName="nome" placeholder="Nome do Modelo">
-        <select class="form-select input-login width-2r-45" [(ngModel)]="modelo.tipo" formControlName="tipo">
-          <option selected>Tipo do Modelo</option>
+        <input [class.is-invalid]="form.controls?.['nome']?.errors && formDir?.['submitted']" type="text"
+          class="form-control input-login width-2r-45" [(ngModel)]="nome" formControlName="nome"
+          placeholder="Nome do Modelo">
+        <select [class.is-invalid]="form.controls?.['tipo']?.errors && formDir?.['submitted']"
+          class="form-select input-login width-2r-45"  formControlName="tipo">
+          <option value="" selected>Tipo do Modelo</option>
           <option value="bermuda">bermuda</option>
           <option value="biquini">biquini</option>
           <option value="bolsa">bolsa</option>
@@ -20,57 +23,73 @@
           <option value="chapéu">chapéu</option>
           <option value="saia">saia</option>
         </select>
-         
+
       </div>
       <div class="width-2">
-        <select class="form-select input-login width-2r-45" [(ngModel)]="modelo.colecao" formControlName="colecao">
-          <option selected>Selecionar coleção</option>
+        <select [class.is-invalid]="form.controls?.['colecao']?.errors && formDir?.['submitted']"
+          class="form-select input-login width-2r-45"  formControlName="colecao">
+          <option value="" selected>Selecionar coleção</option>
           <option *ngFor="let colecao of colecoes" value="{{colecao.nome}}">{{colecao.nome}}</option>
-           
-        </select>
-        
-        <input type="text" class="form-control input-login width-2r-45" [(ngModel)]="modelo.responsavel" formControlName="responsavel" placeholder="Responsável pelo modelo">
-      </div>
 
+        </select>
+
+        <input type="text" [class.is-invalid]="form.controls?.['responsavel']?.errors && formDir?.['submitted']"
+          class="form-control input-login width-2r-45"  formControlName="responsavel"
+          placeholder="Responsável pelo modelo">
+      </div>
+     
+     
       <div class="width-2">
 
 
         <div class="width-2r-45 mx-2">
           <h2 class="h2-radios" for="">Possui bordado?</h2>
-          <div  class="radios" >
-          <label class="">
-            <input type="radio" name="bordado" value="Sim" [(ngModel)]="modelo.bordado" formControlName="bordado" />
-            Sim
-          </label>
-           <label class="">
-            <input type="radio" name="bordado" value="Não" [(ngModel)]="modelo.bordado" formControlName="bordado"/>
-            Não
-          </label>
-        </div>
+          <div class="radios">
+            <label class="">
+              <input [class.is-invalid]="form.controls?.['bordado']?.errors && formDir?.['submitted']" type="radio"
+                name="bordado"  value="Sim"  formControlName="bordado" />
+              Sim
+            </label>
+            <label class="">
+              <input [class.is-invalid]="form.controls?.['bordado']?.errors && formDir?.['submitted']" type="radio"
+                name="bordado"  value="Não" formControlName="bordado" />
+              Não
+            </label>
+          </div>
         </div>
 
         <div class="width-2r-45">
           <h2 class="h2-radios" for="">Possui estampa?</h2>
-          <div  class="radios" >
-          <label class="">
-            <input type="radio" name="estampa" value="Sim" [(ngModel)]="modelo.estampa" formControlName="estampa"/>
-           Sim
-          </label>
-           <label class="">
-            <input type="radio" name="estampa"  value="Não" [(ngModel)]="modelo.estampa" formControlName="estampa" />
-            Não
-          </label>
-        </div>
-        </div>
+          <div class="radios">
+           
+            <label class="">
+              <input type="radio" checked [class.is-invalid]="form.controls?.['estampa']?.errors && formDir?.['submitted']"
+                name="estampa"  value="Sim"   formControlName="estampa" />
+              Sim
+            </label>
+            <label class="">
+              <input type="radio" [class.is-invalid]="form.controls?.['estampa']?.errors && formDir?.['submitted']"
+                name="estampa" value="Não"   formControlName="estampa" />
+              Não
+            </label>
         
+          </div>
+        </div>
+
       </div>
 
+      <div class="width-2">
+        <span class="error mt-4" *ngIf="form.invalid && formDir?.['submitted']">
+          Todos os campos são obrigatorios
+        </span>
+      </div>
       <div class="btns-form">
-        
+
         <div *ngIf="rota[2] === 'editar'" (click)="excluir()" class="excluir">
-        
-        <input type="button" class="form-control btn-simple btn-danger-form btn-form"  value="Excluir"> </div>
-        <input type="button" routerLink="/dashboard"  class="form-control btn-simple btn-form disabled" value="Cancelar">
+
+          <input type="button" class="form-control btn-simple btn-danger-form btn-form" value="Excluir">
+        </div>
+        <input type="button" routerLink="/dashboard" class="form-control btn-simple btn-form disabled" value="Cancelar">
         <input type="submit" class="form-control btn-simple btn-form" value="Salvar">
       </div>
     </form>

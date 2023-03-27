@@ -1,10 +1,10 @@
 {
   "modelos": [
     {
-      "nome": "Refletivo",
+      "nome": "Refletivos",
       "tipo": "bolsa",
-      "responsavel": "TERRA",
-      "colecao": "dddddddd",
+      "responsavel": "5",
+      "colecao": "Refletivo",
       "bordado": "Não",
       "estampa": "Não",
       "id": 1
@@ -12,7 +12,7 @@
     {
       "nome": "assssssssssssssss",
       "tipo": "biquini",
-      "responsavel": "ghgfghf",
+      "responsavel": "ssssss",
       "colecao": "Selecionar coleção",
       "bordado": "Não",
       "estampa": "Não",
