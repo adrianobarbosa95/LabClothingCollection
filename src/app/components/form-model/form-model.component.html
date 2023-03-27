@@ -45,6 +45,8 @@
         <div class="width-2r-45 mx-2">
           <h2 class="h2-radios" for="">Possui bordado?</h2>
           <div class="radios">
+            
+
             <label class="">
               <input [class.is-invalid]="form.controls?.['bordado']?.errors && formDir?.['submitted']" type="radio"
                 name="bordado"  value="Sim"  formControlName="bordado" />
@@ -52,27 +54,25 @@
             </label>
             <label class="">
               <input [class.is-invalid]="form.controls?.['bordado']?.errors && formDir?.['submitted']" type="radio"
-                name="bordado"  value="Não" formControlName="bordado" />
+                name="bordado"  value="Não"   />
               Não
             </label>
+
+
           </div>
         </div>
 
+      
+    
+         
         <div class="width-2r-45">
           <h2 class="h2-radios" for="">Possui estampa?</h2>
           <div class="radios">
-           
             <label class="">
-              <input type="radio" checked [class.is-invalid]="form.controls?.['estampa']?.errors && formDir?.['submitted']"
-                name="estampa"  value="Sim"   formControlName="estampa" />
-              Sim
-            </label>
+              <input type="radio" name="estampa"  value="Sim" formControlName="estampa"/> Sim</label>
             <label class="">
-              <input type="radio" [class.is-invalid]="form.controls?.['estampa']?.errors && formDir?.['submitted']"
-                name="estampa" value="Não"   formControlName="estampa" />
-              Não
+              <input type="radio"  name="estampa" value="Não" formControlName="estampa" checked/> Não
             </label>
-        
           </div>
         </div>
 

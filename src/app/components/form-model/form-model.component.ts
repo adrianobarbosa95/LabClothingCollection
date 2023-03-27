@@ -32,8 +32,8 @@ export class FormModelComponent implements OnInit{
       tipo: ['', [Validators.required]],
       responsavel: ['', [Validators.required]],
       colecao : ['', [Validators.required]],
-      bordado: ['', [Validators.required]],
-      estampa: ['', [Validators.required]],
+      bordado: ['Sim', [Validators.required]],
+      estampa: ['Sim', [Validators.required]],
  
   
     });
