@@ -103,11 +103,12 @@ body {
 
 }
 
-input::placeholder, select {
+input::placeholder,
+select {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px!important;
+  font-size: 14px !important;
   color: #B4B6C1 !important;
 }
 
@@ -170,24 +171,27 @@ input::placeholder, select {
   color: #B4B6C1 !important;
   width: 100%;
 }
-span{
+
+span {
   width: 100%;
 }
 
 .width-2r {
   width: 49% !important;
 }
+
 .width-2r-45 {
   width: 45% !important;
 }
+
 .width-2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.just-cont{
-  justify-content: left!important;
+.just-cont {
+  justify-content: left !important;
 }
 
 
@@ -231,7 +235,7 @@ span{
   margin-bottom: 30%;
 }
 
-.link{
+.link {
   cursor: pointer;
 }
 
@@ -248,7 +252,7 @@ span{
   align-items: center;
   background: #FFFFFF;
   box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.12);
-position: fixed;
+  position: fixed;
 }
 
 .item-navbar {
@@ -299,7 +303,7 @@ position: fixed;
   /* Card Dashboard */
   gap: 40px;
   width: 24vw;
-   height: 90%;
+  height: 90%;
   background: #FFFFFF;
   border-radius: 20px;
   /* Inside auto layout */
@@ -387,7 +391,7 @@ position: fixed;
 
 tr {
   height: 60px;
-cursor: pointer;
+  cursor: pointer;
   color: #9395A3;
   font-family: 'Inter';
   font-style: normal;
@@ -411,7 +415,7 @@ th {
 }
 
 //forms
-.btns-form{
+.btns-form {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -419,46 +423,47 @@ th {
   margin-top: 20%;
   gap: 40px;
 }
-.disabled{
-  background: #EBEBEB!important;
+
+.disabled {
+  background: #EBEBEB !important;
   color: #A098AE;
 }
 
-.radios{
-display: flex;
+.radios {
+  display: flex;
 
   color: #B4B6C1 !important;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-gap: 25px;
-padding-top: 40px;
+  gap: 25px;
+  padding-top: 40px;
 
 }
 
-.h2-radios{color: #B4B6C1 !important;
+.h2-radios {
+  color: #B4B6C1 !important;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   text-align: left;
 }
-.btn-form{
+
+.btn-form {
   padding-left: 70px !important;
   padding-right: 70px !important;
 }
-.excluir{
+
+.excluir {
   width: 100%;
 }
-.btn-danger-form{
 
+.btn-danger-form {
   background: #FF4141 !important;
- 
- 
- 
 }
-.error{
- 
+
+.error {
   color: #b02a37;
 }

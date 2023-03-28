@@ -20,8 +20,7 @@ export class DashboardComponent {
   constructor(private colecao: ColecaoService, private modelo: ModeloService) {
     this.modelo.obterTodosModelos().then((res) =>
       this.modelos = res);
-
-    this.colecao.obterTodasColecoes().then((res) => {
+      this.colecao.obterTodasColecoes().then((res) => {
       this.colecoes = res;
       this.colecoes.forEach((colecao => { this.somaColecao += Number.parseFloat(colecao.orcamento) }));
       this.title = ['Coleções', 'Modelos', "Orçamento Médio (R$)"];

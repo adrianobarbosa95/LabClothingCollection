@@ -19,7 +19,6 @@ export class LoginComponent {
   invalido = false;
 
   logado !: string;
- 
 
   constructor(private fb: FormBuilder, private router: Router, private auth: AuthService) {
     this.form = this.fb.group({
@@ -31,10 +30,8 @@ export class LoginComponent {
   async onSubmit() {
 
     if (this.form.valid) {
-      
       // this.logado = await this.auth.loggin(this.email, this.senha) ? "": "verifique os dados e tente novamente"; 
       this.invalido = await this.auth.loggin(this.email, this.senha) ? true : false; 
- 
     }  
   }
  

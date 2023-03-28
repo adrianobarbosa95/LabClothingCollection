@@ -11,70 +11,53 @@ import { ModeloService } from 'src/app/services/modelo.service';
   templateUrl: './form-model.component.html',
   styleUrls: ['./form-model.component.scss']
 })
-export class FormModelComponent implements OnInit{
+export class FormModelComponent implements OnInit {
   colecoes!: Colecao[];
   modelos!: Modelo[];
   nome!: string;
   tipo!: string;
-  responsavel!:string;
+  responsavel!: string;
   colecao !: string;
-  bordado!:string;
-  estampa!:string;
+  bordado!: string;
+  estampa!: string;
 
   form!: FormGroup;
-  rota:any;
-  constructor(private colecao_service: ColecaoService, private modelo_service: ModeloService,  private router: Router, private fb:FormBuilder) {
-    this.colecao_service.obterTodasColecoes().then((res) =>
-    this.colecoes = res);
+  rota: any;
+  constructor(private colecao_service: ColecaoService, private modelo_service: ModeloService, private router: Router, private fb: FormBuilder) {
+    this.colecao_service.obterTodasColecoes().then((res) =>this.colecoes = res);
     this.form = fb.group({
-  
       nome: ['', [Validators.required]],
       tipo: ['', [Validators.required]],
       responsavel: ['', [Validators.required]],
-      colecao : ['', [Validators.required]],
+      colecao: ['', [Validators.required]],
       bordado: ['Sim', [Validators.required]],
       estampa: ['Sim', [Validators.required]],
- 
-  
     });
-
-    
-    
     this.rota = this.router.url.split('/');
   }
+  async ngOnInit(): Promise<void> {
 
- 
-  
-  
-    
-    async ngOnInit(): Promise<void> {
-      
-    if(this.rota[2] === 'editar'){
+    if (this.rota[2] === 'editar') {
       // this.modelo = this.form.value;
       this.form.setValue(await this.modelo_service.buscarModelo(this.rota[3]));
-       
-    }   
-  
+    }
 
   }
 
-    onSubmit(){
-      
-      if(this.form.valid && this.rota[2] === 'criar'){
-        
-        this.modelo_service.cadastrarModelo(this.form.value);
-        this.router.navigate(['/modelos']);
-      } else if(this.form.valid && this.rota[2] === 'editar'){
-
-        this.modelo_service.atualizarModelo(this.form.value, this.rota[3] );
-        this.router.navigate(['/modelos']);
-      }  
-      
+  onSubmit() {
+    if (this.form.valid && this.rota[2] === 'criar') {
+      this.modelo_service.cadastrarModelo(this.form.value);
+      this.router.navigate(['/modelos']);
+    } else if (this.form.valid && this.rota[2] === 'editar') {
+      this.modelo_service.atualizarModelo(this.form.value, this.rota[3]);
+      this.router.navigate(['/modelos']);
     }
-    excluir(){
-      if(confirm("Tem certeza que realmente deseja excluir?")){
+  }
+  
+  excluir() {
+    if (confirm("Tem certeza que realmente deseja excluir?")) {
       this.modelo_service.excluirModelo(this.rota[3]);
       this.router.navigate(['/modelos']);
     }
-    }
+  }
 }

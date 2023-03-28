@@ -1,5 +1,5 @@
 <div class="corpo">
- 
+
   <h1 class="title-dash" *ngIf="rota[2] === 'criar'">Criar Coleção</h1>
   <h1 class="title-dash" *ngIf="rota[2] === 'editar'">Editar Coleção</h1>
 
@@ -8,29 +8,32 @@
 
       <div class="width-2">
 
-  
+        <input [class.is-invalid]="form.controls?.['nome']?.errors && formDir?.['submitted']" type="text"
+          class="form-control input-login width-2r-45" [(ngModel)]="colecao.nome" formControlName="nome"
+          placeholder="Nome da Coleção">
+          
+        <input [class.is-invalid]="form.controls?.['responsavel']?.errors && formDir?.['submitted']" type="text"
+          class="form-control input-login width-2r-45" [(ngModel)]="colecao.responsavel" formControlName="responsavel"
+          placeholder="Responsável pela coleção">
 
-      <input  [class.is-invalid]="form.controls?.['nome']?.errors && formDir?.['submitted']"  type="text" class="form-control input-login width-2r-45" [(ngModel)]="colecao.nome"
-      formControlName="nome" placeholder="Nome da Coleção">
- 
- 
-      <input [class.is-invalid]="form.controls?.['responsavel']?.errors && formDir?.['submitted']"  type="text" class="form-control input-login width-2r-45" [(ngModel)]="colecao.responsavel"
-      formControlName="responsavel" placeholder="Responsável pela coleção">
-
-</div>
-
-      <div class="width-2">
-        <input [class.is-invalid]="form.controls?.['estacao']?.errors && formDir?.['submitted']" type="text" class="form-control input-login width-2r-45" [(ngModel)]="colecao.estacao"
-          formControlName="estacao" placeholder="Para qual estação?">
-        <input [class.is-invalid]="form.controls?.['marca']?.errors && formDir?.['submitted']" type="text" class="form-control input-login width-2r-45" [(ngModel)]="colecao.marca"
-          formControlName="marca" placeholder="Para qual marca você está criando?">
       </div>
 
       <div class="width-2">
-        <input [class.is-invalid]="form.controls?.['orcamento']?.errors && formDir?.['submitted']"  type="number" class="form-control input-login width-2r-45" [(ngModel)]="colecao.orcamento"
-          formControlName="orcamento" placeholder="Qual é o orçamento desta coleção?">
-        <input  [class.is-invalid]="form.controls?.['ano']?.errors && formDir?.['submitted']" type="number" class="form-control input-login width-2r-45" [(ngModel)]="colecao.ano"
-          formControlName="ano" placeholder="Ano de Lançamento">
+        <input [class.is-invalid]="form.controls?.['estacao']?.errors && formDir?.['submitted']" type="text"
+          class="form-control input-login width-2r-45" [(ngModel)]="colecao.estacao" formControlName="estacao"
+          placeholder="Para qual estação?">
+        <input [class.is-invalid]="form.controls?.['marca']?.errors && formDir?.['submitted']" type="text"
+          class="form-control input-login width-2r-45" [(ngModel)]="colecao.marca" formControlName="marca"
+          placeholder="Para qual marca você está criando?">
+      </div>
+
+      <div class="width-2">
+        <input [class.is-invalid]="form.controls?.['orcamento']?.errors && formDir?.['submitted']" type="number"
+          class="form-control input-login width-2r-45" [(ngModel)]="colecao.orcamento" formControlName="orcamento"
+          placeholder="Qual é o orçamento desta coleção?">
+        <input [class.is-invalid]="form.controls?.['ano']?.errors && formDir?.['submitted']" type="number"
+          class="form-control input-login width-2r-45" [(ngModel)]="colecao.ano" formControlName="ano"
+          placeholder="Ano de Lançamento">
       </div>
 
       <div class="width-2">
@@ -38,8 +41,6 @@
           Todos os campos são obrigatorios
         </span>
       </div>
-
-    
       <img src="assets/img/ilustracao.png" alt="">
       <div class="btns-form">
 

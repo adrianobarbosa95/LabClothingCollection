@@ -1,98 +1,61 @@
 {
-  "modelos": [
-    {
-      "nome": "Refletivos",
-      "tipo": "bolsa",
-      "responsavel": "5",
-      "colecao": "Refletivo",
-      "bordado": "Não",
-      "estampa": "Não",
-      "id": 1
-    },
-    {
-      "nome": "assssssssssssssss",
-      "tipo": "biquini",
-      "responsavel": "ssssss",
-      "colecao": "Selecionar coleção",
-      "bordado": "Sim",
-      "estampa": "Não",
-      "id": 3
-    }
-  ],
+  "modelos": [],
   "colecoes": [
     {
-      "nome": "Refletivo",
-      "responsavel": "TERRA",
-      "estacao": "VERAO",
-      "orcamento": 20000,
-      "ano": 1995,
-      "marca": "NICK",
+      "nome": "Evolution",
+      "responsavel": "Adriano Barbosa",
+      "estacao": "Verão",
+      "orcamento": 89700.79,
+      "ano": 2023,
+      "marca": "Nike",
       "id": 1
     },
     {
-      "nome": "terrasanta",
-      "responsavel": "shakh",
-      "estacao": "ghhhh",
-      "orcamento": 1165,
-      "ano": 45466,
-      "marca": "jkhkjhk",
+      "nome": "Redenção",
+      "responsavel": "Luciana Souza",
+      "estacao": "Verão",
+      "orcamento": 200000,
+      "ano": 2024,
+      "marca": "Riachuelo",
+      "id": 2
+    },
+    {
+      "nome": "Invictos",
+      "responsavel": "Lucas de Souza",
+      "estacao": "Inverno",
+      "orcamento": 1500000,
+      "ano": 2024,
+      "marca": "Shein",
       "id": 3
     },
     {
-      "nome": "LuS",
-      "responsavel": "Lucas de Souza",
-      "estacao": "Inverno",
-      "orcamento": 400000,
+      "nome": "DIOR AND DUNCAN",
+      "responsavel": "Larissa Duarte",
+      "estacao": "Verão",
+      "orcamento": 3987525,
+      "ano": 2023,
+      "marca": "Christian Dior",
+      "id": 4
+    },
+    {
+      "nome": "Way and Way",
+      "responsavel": "Zenaide Barbosa",
+      "estacao": "Outuno",
+      "orcamento": 978325,
       "ano": 2023,
       "marca": "C&A",
-      "id": 6
-    },
-    {
-      "nome": "nenhuma",
-      "responsavel": "alguem",
-      "estacao": "advinhe",
-      "orcamento": 1000,
-      "ano": 1585,
-      "marca": "todas",
-      "id": 8
-    },
-    {
-      "nome": "q",
-      "responsavel": "q",
-      "estacao": "q",
-      "orcamento": 111,
-      "ano": 33,
-      "marca": "q",
-      "id": 9
+      "id": 5
     }
   ],
   "usuarios": [
     {
       "email": "admin@admin.com",
-      "senha": "123456789",
-      "nome": "terra",
-      "empresa": "baiana",
-      "cnpj": "123465789101214",
-      "confirmPassword": "123456789",
-      "id": 1
-    },
-    {
-      "email": "admin@admin.com",
       "senha": "12345678",
-      "nome": "terra",
-      "empresa": "baiana",
-      "cnpj": "123465789101214",
+      "nome": "Admin",
+      "empresa": "Administrador",
+      "cnpj": "12345678901234",
       "confirmPassword": "12345678",
-      "id": 2
-    },
-    {
-      "email": "adrianobarbosa95@gmail.com",
-      "senha": "81140420",
-      "nome": "Adriano",
-      "empresa": "Terra",
-      "cnpj": "12345678971548",
-      "confirmPassword": "81140420",
-      "id": 3
+      "id": 1
     }
   ]
 }

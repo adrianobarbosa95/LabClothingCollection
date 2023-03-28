@@ -5,9 +5,6 @@
     <h2 class="subtitle-card important">Insira seus dados para criar uma conta</h2>
     <form class="form-login-card needs-validation" novalidate (ngSubmit)="onSubmit()" [formGroup]="form" action=""
       #formDir="ngForm">
-
-
-
       <div class="input-group has-validation">
         <input type="text" class="form-control input-login"
           [class.is-invalid]="form.controls?.['nome']?.errors && formDir?.['submitted']" formControlName="nome"
@@ -18,9 +15,6 @@
           </span>
         </ng-container>
       </div>
-
-
-      
       <div class="input-group has-validation">
         <input type="text" class="form-control input-login"
           [class.is-invalid]="form.controls?.['empresa']?.errors && formDir?.['submitted']" formControlName="empresa"
@@ -31,8 +25,6 @@
           </span>
         </ng-container>
       </div>
-
-     
       <div class="input-group has-validation">
         <input type="text" class="form-control input-login"
           [class.is-invalid]="form.controls?.['cnpj']?.errors && formDir?.['submitted']" formControlName="cnpj"
@@ -43,8 +35,6 @@
           </span>
         </ng-container>
       </div>
-
-
       <div class="input-group has-validation">
         <input type="text" class="form-control input-login"
           [class.is-invalid]="form.controls?.['email']?.errors && formDir?.['submitted']" formControlName="email"
@@ -55,40 +45,20 @@
           </span>
         </ng-container>
       </div>
- 
-
-
-
       <div class="input-group has-validation">
-
         <div class="width-2">
-
-            <input type="password" class="form-control input-login width-2r" formControlName="senha" [(ngModel)]="senha"
-            placeholder="Senha"   [class.is-invalid]="form.controls?.['senha']?.errors && formDir?.['submitted']">
-           
-            <input type="password" class="form-control input-login width-2r"
-            [class.is-invalid]="form.controls?.['confirmPassword']?.errors && formDir?.['submitted']" formControlName="confirmPassword"
-            [(ngModel)]="confirmPassword" placeholder="Confirmar senha">
-        
-
+          <input type="password" class="form-control input-login width-2r" formControlName="senha" [(ngModel)]="senha"
+            placeholder="Senha" [class.is-invalid]="form.controls?.['senha']?.errors && formDir?.['submitted']">
+          <input type="password" class="form-control input-login width-2r"
+            [class.is-invalid]="form.controls?.['confirmPassword']?.errors && formDir?.['submitted']"
+            formControlName="confirmPassword" [(ngModel)]="confirmPassword" placeholder="Confirmar senha">
         </div>
-
         <ng-container *ngIf="form.controls?.['confirmPassword']?.errors && formDir?.['submitted']">
           <p class=" mb-4 w-100 error" *ngIf="form.controls['confirmPassword'].errors">
-           <small>As senhas devem coresponderem e ter minimo de 8 caracteres. </small> 
+            <small>As senhas devem coresponderem e ter minimo de 8 caracteres. </small>
           </p>
         </ng-container>
-        
-
       </div>
- 
-
-
-
-       
-
-
-
       <input type="submit" class="form-control btn-cadastro-aluno" value="Criar Conta">
     </form>
   </div>

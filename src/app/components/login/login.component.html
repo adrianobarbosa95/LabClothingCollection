@@ -1,18 +1,14 @@
-
-
 <div class="box">
-
-  <div class="toast align-items-center text-bg-primary border-0 m-4 fixed" [class.show]="invalido" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast align-items-center text-bg-primary border-0 m-4 fixed" [class.show]="invalido" role="alert"
+    aria-live="assertive" aria-atomic="true">
     <div class="d-flex">
       <div class="toast-body">
-       Senha ou email incorreto!
+        Senha ou email incorreto!
       </div>
-      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+        aria-label="Close"></button>
     </div>
   </div>
-  
-
-
   <img src="assets/img/logo.png" alt="" class="logo-login">
   <div class="card-login">
     <h1 class="title-card">Sign In</h1>
@@ -26,16 +22,15 @@
         </span>
       </div>
       <div class="input-group has-validation">
-        <input type="text" class="form-control input-login " [class.is-invalid]="form.controls['senha'].errors" placeholder="Informe sua senha" formControlName="senha"
-          [(ngModel)]="senha">
+        <input type="text" class="form-control input-login " [class.is-invalid]="form.controls['senha'].errors"
+          placeholder="Informe sua senha" formControlName="senha" [(ngModel)]="senha">
         <span class="invalid-feedback mb-3" *ngIf="form.controls['senha'].errors">
           Mínimo 8 caracteres!
         </span>
-        </div>
-        <h2 *ngIf="logado" class="error" for="">{{logado}}</h2>
-        <input type="submit" class="form-control" [disabled]="!form.valid" value="Entrar">
+      </div>
+      <h2 *ngIf="logado" class="error" for="">{{logado}}</h2>
+      <input type="submit" class="form-control" [disabled]="!form.valid" value="Entrar">
     </form>
-
   </div>
   <div class="links">
     <h2 class="subtitle-card important pass">Esqueceu sua senha? <a routerLink="/recuperar-senha">Redefinir senha</a>
