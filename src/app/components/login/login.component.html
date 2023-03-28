@@ -13,23 +13,23 @@
   <div class="card-login">
     <h1 class="title-card">Sign In</h1>
     <h2 class="subtitle-card important">Insira suas credenciais para acessar sua conta</h2>
-    <form class="form-login-card" action="" (ngSubmit)="onSubmit()" [formGroup]="form">
+    <form class="form-login-card" action="" (ngSubmit)="onSubmit()" [formGroup]="form" #formDir="ngForm">
       <div class="input-group has-validation">
-        <input type="email" class="form-control input-login" [class.is-invalid]="form.controls['email'].errors"
+        <input type="email" class="form-control input-login" [class.is-invalid]="form.controls['email'].errors && formDir?.submitted"
           placeholder="Informe seu e-mail" formControlName="email" [(ngModel)]="email">
-        <span class="invalid-feedback mb-3" *ngIf="form.controls['email'].errors">
+        <span class="invalid-feedback mb-3" *ngIf="form.controls['email'].errors && formDir?.submitted">
           Digite seu email cadastrado!
         </span>
       </div>
       <div class="input-group has-validation">
-        <input type="text" class="form-control input-login " [class.is-invalid]="form.controls['senha'].errors"
+        <input type="text" class="form-control input-login " [class.is-invalid]="form.controls['senha'].errors && formDir?.submitted"
           placeholder="Informe sua senha" formControlName="senha" [(ngModel)]="senha">
-        <span class="invalid-feedback mb-3" *ngIf="form.controls['senha'].errors">
+        <span class="invalid-feedback mb-3" *ngIf="form.controls['senha'].errors && formDir?.submitted">
           Mínimo 8 caracteres!
         </span>
       </div>
       <h2 *ngIf="logado" class="error" for="">{{logado}}</h2>
-      <input type="submit" class="form-control" [disabled]="!form.valid" value="Entrar">
+      <input type="submit" class="form-control" value="Entrar">
     </form>
   </div>
   <div class="links">

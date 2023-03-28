@@ -14,8 +14,8 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent {
   form!: FormGroup;
-  email: string = 'admin@admin.com';
-  senha: string ='12345678';
+  email!: string;
+  senha!: string;
   invalido = false;
 
   logado !: string;
@@ -31,10 +31,10 @@ export class LoginComponent {
 
     if (this.form.valid) {
       // this.logado = await this.auth.loggin(this.email, this.senha) ? "": "verifique os dados e tente novamente"; 
-      this.invalido = await this.auth.loggin(this.email, this.senha) ? true : false; 
-    }  
+      this.invalido = await this.auth.loggin(this.email, this.senha) ? true : false;
+    }
   }
- 
+
   public loggin(email: string, senha: string) {
     // this._httpClient.get<{email: string, senha:string}[]>(this.url).forEach(retorno=> {if(email == retorno.email && senha ==retorno.senha) this.logado = true;});
     console.log();

@@ -16,11 +16,11 @@
         redefinir sua senha.</h2>
 
 
-      <form class="form-login-card needs-validation" novalidate  (ngSubmit) = "onSubmit()" [formGroup]="form" action="">
-        <input type="text" class="form-control input-login" formControlName="email" [(ngModel)]="email" placeholder="Informe seu e-mail">
-        <div class="valid-feedback">
-          Looks good!
-        </div>
+      <form class="form-login-card needs-validation" novalidate  (ngSubmit) = "onSubmit()" #formDir="ngForm" [formGroup]="form" action="">
+        <input type="text" class="form-control input-login" [class.is-invalid]="form.controls['email'].errors && formDir?.submitted" formControlName="email" [(ngModel)]="email" placeholder="Informe seu e-mail">
+        <span class="invalid-feedback mb-3" *ngIf="form.controls['email'].errors && formDir?.submitted">
+          Digite seu email cadastrado!
+        </span>
         <input type="submit" class="form-control" value="Enviar Recuperação">
       </form>
 

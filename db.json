@@ -5,7 +5,7 @@
       "nome": "Evolution",
       "responsavel": "Adriano Barbosa",
       "estacao": "Verão",
-      "orcamento": 8970007,
+      "orcamento": 897007,
       "ano": 2023,
       "marca": "Nike",
       "id": 1
@@ -32,7 +32,7 @@
       "nome": "DIOR AND DUNCAN",
       "responsavel": "Larissa Duarte",
       "estacao": "Verão",
-      "orcamento": 3987525,
+      "orcamento": 987525,
       "ano": 2023,
       "marca": "Christian Dior",
       "id": 4
@@ -63,15 +63,6 @@
       "ano": 2025,
       "marca": "Vivara",
       "id": 7
-    },
-    {
-      "nome": "Terra",
-      "responsavel": "Casa",
-      "estacao": "caderno",
-      "orcamento": 222222222,
-      "ano": 44444444,
-      "marca": "dedo",
-      "id": 8
     }
   ],
   "usuarios": [
