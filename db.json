@@ -5,7 +5,7 @@
       "nome": "Evolution",
       "responsavel": "Adriano Barbosa",
       "estacao": "Verão",
-      "orcamento": 89700.79,
+      "orcamento": 8970007,
       "ano": 2023,
       "marca": "Nike",
       "id": 1
@@ -54,6 +54,24 @@
       "ano": 2023,
       "marca": "Marvel",
       "id": 6
+    },
+    {
+      "nome": "LifeStyle",
+      "responsavel": "Sionara Viera",
+      "estacao": "Inverno",
+      "orcamento": 850000,
+      "ano": 2025,
+      "marca": "Vivara",
+      "id": 7
+    },
+    {
+      "nome": "Terra",
+      "responsavel": "Casa",
+      "estacao": "caderno",
+      "orcamento": 222222222,
+      "ano": 44444444,
+      "marca": "dedo",
+      "id": 8
     }
   ],
   "usuarios": [
@@ -65,6 +83,15 @@
       "cnpj": "12345678901234",
       "confirmPassword": "12345678",
       "id": 1
+    },
+    {
+      "email": "lucaskas85@gmail.com",
+      "senha": "Poliana20",
+      "nome": "Lucas de Souza Santos",
+      "empresa": "Averenge",
+      "cnpj": "25165626622598",
+      "confirmPassword": "Poliana20",
+      "id": 2
     }
   ]
 }
