@@ -45,6 +45,15 @@
       "ano": 2023,
       "marca": "C&A",
       "id": 5
+    },
+    {
+      "nome": "E2E",
+      "responsavel": "Patricys Ygor",
+      "estacao": "Primavera",
+      "orcamento": 350000,
+      "ano": 2023,
+      "marca": "Marvel",
+      "id": 6
     }
   ],
   "usuarios": [

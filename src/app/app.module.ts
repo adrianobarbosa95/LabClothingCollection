@@ -52,7 +52,7 @@ import { RealPipe } from './pipes/real.pipe';
     HttpClientModule,  
 
   ],
-  providers: [DbService, UserPipe],
+  providers: [DbService, UserPipe, RealPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
