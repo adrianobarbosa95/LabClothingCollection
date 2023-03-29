@@ -1,8 +1,45 @@
 {
-  "modelos": [],
+  "modelos": [
+    {
+      "nome": "Nike Revolution 6",
+      "tipo": "calçados",
+      "responsavel": "Adriano Barbosa",
+      "colecao": "Revolution",
+      "bordado": "Sim",
+      "estampa": "Não",
+      "id": 1
+    },
+    {
+      "nome": "Biquíni Citric",
+      "tipo": "biquini",
+      "responsavel": "Andrew Samuel",
+      "colecao": "Redenção",
+      "bordado": "Sim",
+      "estampa": "Não",
+      "id": 2
+    },
+    {
+      "nome": "Swetos",
+      "tipo": "camisa",
+      "responsavel": "David Dolares",
+      "colecao": "Invictos",
+      "bordado": "Sim",
+      "estampa": "Sim",
+      "id": 3
+    },
+    {
+      "nome": "Brics ",
+      "tipo": "bolsa",
+      "responsavel": "Laerte Chiachietto",
+      "colecao": "Revolution",
+      "bordado": "Sim",
+      "estampa": "Sim",
+      "id": 4
+    }
+  ],
   "colecoes": [
     {
-      "nome": "Evolution",
+      "nome": "Revolution",
       "responsavel": "Adriano Barbosa",
       "estacao": "Verão",
       "orcamento": 897007,
@@ -63,6 +100,15 @@
       "ano": 2025,
       "marca": "Vivara",
       "id": 7
+    },
+    {
+      "nome": "Arts ",
+      "responsavel": "Viola Fregarri",
+      "estacao": "Inverno",
+      "orcamento": 258000,
+      "ano": 2026,
+      "marca": "Nike",
+      "id": 8
     }
   ],
   "usuarios": [
@@ -83,6 +129,24 @@
       "cnpj": "25165626622598",
       "confirmPassword": "Poliana20",
       "id": 2
+    },
+    {
+      "email": "adrianobarbosa95@gmail.com",
+      "senha": "81140420",
+      "nome": "Adriano Barbosa",
+      "empresa": "Nike",
+      "cnpj": "98754554454844",
+      "confirmPassword": "81140420",
+      "id": 3
+    },
+    {
+      "email": "roberto@carlos",
+      "senha": "12345678",
+      "nome": "Roberto Carlos",
+      "empresa": "Rei Roberto Carlos",
+      "cnpj": "98745612336789",
+      "confirmPassword": "12345678",
+      "id": 4
     }
   ]
 }

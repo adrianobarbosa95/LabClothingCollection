@@ -22,7 +22,7 @@
         </span>
       </div>
       <div class="input-group has-validation">
-        <input type="text" class="form-control input-login " [class.is-invalid]="form.controls['senha'].errors && formDir?.submitted"
+        <input type="password" class="form-control input-login " [class.is-invalid]="form.controls['senha'].errors && formDir?.submitted"
           placeholder="Informe sua senha" formControlName="senha" [(ngModel)]="senha">
         <span class="invalid-feedback mb-3" *ngIf="form.controls['senha'].errors && formDir?.submitted">
           Mínimo 8 caracteres!

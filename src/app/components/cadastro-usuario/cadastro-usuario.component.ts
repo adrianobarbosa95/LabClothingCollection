@@ -45,7 +45,9 @@ onSubmit(){
   if(this.form.valid && this.senha===this.confirmPassword){
 
      firstValueFrom(this._httpClient.post<Usuario>(this.url, usuario) );
-  this.router.navigate(['/dashboard']);
+alert('Cadastro realizado com sucesso!');
+     this.router.navigate(['/dashboard']);
+
   }
 else{
   
