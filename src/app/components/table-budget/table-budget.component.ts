@@ -13,24 +13,16 @@ import { ModeloService } from 'src/app/services/modelo.service';
   styleUrls: ['./table-budget.component.scss']
 })
 export class TableBudgetComponent {
-  colecoes!: Colecao[];  
-  colecoesCompletas!: Colecao[];  
+  colecoes!: Colecao[];
+  colecoesCompletas!: Colecao[];
   modelos!: Modelo[];
-rota!:any;
+  rota!: any;
 
-
-  constructor(private colecao: ColecaoService, private modelo: ModeloService,  private router: Router) {
-    colecao.listarColecoes().then((res) =>
-      this.colecoes = res
-    );
-    colecao.obterTodasColecoes().then((res) =>
-    this.colecoesCompletas = res
-  );
-    modelo.obterTodosModelos().then((res) =>
-      this.modelos = res
-    );
+  constructor(private colecao: ColecaoService, private modelo: ModeloService, private router: Router) {
+    colecao.listarColecoes().then((res) => this.colecoes = res);
+    colecao.obterTodasColecoes().then((res) => this.colecoesCompletas = res);
+    modelo.obterTodosModelos().then((res) => this.modelos = res);
     this.rota = this.router.url.split('/')[1];
   }
-
 
 }

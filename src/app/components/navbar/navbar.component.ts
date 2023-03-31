@@ -7,8 +7,7 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
-
-  sair(){
+  sair(): void {
     localStorage.clear();
   }
 

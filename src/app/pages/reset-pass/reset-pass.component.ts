@@ -12,18 +12,13 @@ export class ResetPassComponent {
   email!: string;
   enviado = false;
 
-  constructor (private fb: FormBuilder) {
- 
+  constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
     });
-    
   }
-  
-onSubmit(){
-  // if(this.form.valid){}
-  
+
+  onSubmit(): boolean {
     return this.enviado = this.form.valid;
-  
-}
+  }
 }

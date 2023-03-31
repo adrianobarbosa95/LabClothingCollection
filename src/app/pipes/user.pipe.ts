@@ -4,11 +4,9 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'user'
 })
 export class UserPipe implements PipeTransform {
-  // unknown
+  
   transform(value: string): string {
-     
     return value.split('@')[0];
-
   }
 
 }

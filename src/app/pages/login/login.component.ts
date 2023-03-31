@@ -13,11 +13,11 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+ 
   form!: FormGroup;
   email!: string;
   senha!: string;
   invalido = false;
-
   logado !: string;
 
   constructor(private fb: FormBuilder, private router: Router, private auth: AuthService) {
@@ -25,19 +25,13 @@ export class LoginComponent {
       email: ['', [Validators.required, Validators.email]],
       senha: ['', [Validators.required, Validators.minLength(8)]],
     });
-
   }
-  async onSubmit() {
 
+  async onSubmit() {
     if (this.form.valid) {
       // this.logado = await this.auth.loggin(this.email, this.senha) ? "": "verifique os dados e tente novamente"; 
       this.invalido = await this.auth.loggin(this.email, this.senha) ? true : false;
     }
-  }
-
-  public loggin(email: string, senha: string) {
-    // this._httpClient.get<{email: string, senha:string}[]>(this.url).forEach(retorno=> {if(email == retorno.email && senha ==retorno.senha) this.logado = true;});
-    console.log();
   }
 
 }

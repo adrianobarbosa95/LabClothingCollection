@@ -6,37 +6,27 @@
         <img src="assets/img/ceta.png" class="seta link" routerLink="/entrar" alt="">
       </div>
       <h1 class="title-card">Redefinir Senha</h1>
-
-
     </div>
-
     <div *ngIf="!enviado; else elseBlock">
-
       <h2 class="subtitle-card important imp-reset">Digite o e-mail associado à sua conta e enviaremos instruções para
         redefinir sua senha.</h2>
-
-
-      <form class="form-login-card needs-validation" novalidate  (ngSubmit) = "onSubmit()" #formDir="ngForm" [formGroup]="form" action="">
-        <input type="text" class="form-control input-login" [class.is-invalid]="form.controls['email'].errors && formDir?.submitted" formControlName="email" [(ngModel)]="email" placeholder="Informe seu e-mail">
+      <form class="form-login-card needs-validation" novalidate (ngSubmit)="onSubmit()" #formDir="ngForm"
+        [formGroup]="form" action="">
+        <input type="text" class="form-control input-login"
+          [class.is-invalid]="form.controls['email'].errors && formDir?.submitted" formControlName="email"
+          [(ngModel)]="email" placeholder="Informe seu e-mail">
         <span class="invalid-feedback mb-3" *ngIf="form.controls['email'].errors && formDir?.submitted">
           Digite seu email cadastrado!
         </span>
         <input type="submit" class="form-control" value="Enviar Recuperação">
       </form>
-
-
     </div>
     <ng-template #elseBlock>
-      
-      <h2 class="subtitle-card important imp-reset pt-5 pb-4">Um link para redefinição de senha foi enviado para o e-mail {{email}}</h2>
-
-
-       
-        <input type="submit" class="form-control" routerLink="/entrar" value="Ir para login">
-      
+      <h2 class="subtitle-card important imp-reset pt-5 pb-4">Um link para redefinição de senha foi enviado para o
+        e-mail {{email}}</h2>
+      <input type="submit" class="form-control" routerLink="/entrar" value="Ir para login">
     </ng-template>
   </div>
   <div class="links">
-
   </div>
 </div>

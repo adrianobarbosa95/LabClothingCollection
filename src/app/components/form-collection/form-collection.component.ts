@@ -18,19 +18,15 @@ export class FormCollectionComponent implements OnInit {
   rota: any;
   myModal: any;
 
-
-
   constructor(private fb: FormBuilder, private user: UserPipe, private colecao_service: ColecaoService, private router: Router) {
 
     this.form = fb.group({
-
       nome: ['', [Validators.required]],
       responsavel: ['', [Validators.required]],
       estacao: ['', [Validators.required]],
       orcamento: ['', [Validators.required, Validators.pattern(/^[0-9]+(\.[0-9]{1,2})?$/)]],
       ano: ['', [Validators.required, Validators.minLength(4)]],
       marca: ['', [Validators.required]],
-
     });
 
     this.colecao = this.form.value;
@@ -40,14 +36,11 @@ export class FormCollectionComponent implements OnInit {
   }
 
   async ngOnInit(): Promise<void> {
-
-
     if (this.rota[2] === 'editar') {
       this.form.setValue(await this.colecao_service.buscarColecao(this.rota[3]));
     }
-
   }
-  onSubmit() {
+  onSubmit(): void {
     if (this.form.valid && this.rota[2] === 'criar') {
       this.colecao_service.cadastrarColecao(this.form.value);
       this.router.navigate(['/colecoes']);
@@ -56,7 +49,7 @@ export class FormCollectionComponent implements OnInit {
       this.router.navigate(['/colecoes']);
     }
   }
-  excluir() {
+  excluir(): void {
     if (confirm("Tem certeza que realmente deseja excluir?")) {
       this.colecao_service.excluirColecao(this.rota[3]);
       this.router.navigate(['/colecoes']);

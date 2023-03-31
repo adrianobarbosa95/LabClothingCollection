@@ -1,8 +1,6 @@
 <div class="corpo">
-
   <h1 class="title-dash" *ngIf="rota[2] === 'criar'">Criar Modelo</h1>
   <h1 class="title-dash" *ngIf="rota[2] === 'editar'">Editar Modelo</h1>
-
   <div class="table-bb">
     <form class="p-3 px-5 center" action="" (ngSubmit)="onSubmit()" [formGroup]="form" #formDir="ngForm">
       <div class="width-2">
@@ -22,21 +20,17 @@
           <option value="chapéu">chapéu</option>
           <option value="saia">saia</option>
         </select>
-
       </div>
       <div class="width-2">
         <select [class.is-invalid]="form.controls?.['colecao']?.errors && formDir?.['submitted']"
           class="form-select input-login width-2r-45" formControlName="colecao">
           <option value="" selected>Selecionar coleção</option>
           <option *ngFor="let colecao of colecoes" value="{{colecao.nome}}">{{colecao.nome}}</option>
-
         </select>
-
         <input type="text" [class.is-invalid]="form.controls?.['responsavel']?.errors && formDir?.['submitted']"
           class="form-control input-login width-2r-45" formControlName="responsavel"
           placeholder="Responsável pelo modelo">
       </div>
-
       <div class="width-2">
         <div class="width-2r-45 mx-2">
           <h2 class="h2-radios" for="">Possui bordado?</h2>
@@ -53,7 +47,6 @@
             </label>
           </div>
         </div>
-
         <div class="width-2r-45">
           <h2 class="h2-radios" for="">Possui estampa?</h2>
           <div class="radios">
@@ -65,7 +58,6 @@
           </div>
         </div>
       </div>
-
       <div class="width-2">
         <span class="error mt-4" *ngIf="form.invalid && formDir?.['submitted']">
           Todos os campos são obrigatorios

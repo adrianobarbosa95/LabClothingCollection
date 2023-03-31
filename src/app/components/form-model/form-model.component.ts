@@ -12,6 +12,7 @@ import { ModeloService } from 'src/app/services/modelo.service';
   styleUrls: ['./form-model.component.scss']
 })
 export class FormModelComponent implements OnInit {
+
   colecoes!: Colecao[];
   modelos!: Modelo[];
   nome!: string;
@@ -20,11 +21,11 @@ export class FormModelComponent implements OnInit {
   colecao !: string;
   bordado!: string;
   estampa!: string;
-
   form!: FormGroup;
   rota: any;
+
   constructor(private colecao_service: ColecaoService, private modelo_service: ModeloService, private router: Router, private fb: FormBuilder) {
-    this.colecao_service.obterTodasColecoes().then((res) =>this.colecoes = res);
+    this.colecao_service.obterTodasColecoes().then((res) => this.colecoes = res);
     this.form = fb.group({
       nome: ['', [Validators.required]],
       tipo: ['', [Validators.required]],
@@ -35,16 +36,15 @@ export class FormModelComponent implements OnInit {
     });
     this.rota = this.router.url.split('/');
   }
-  async ngOnInit(): Promise<void> {
 
+  async ngOnInit(): Promise<void> {
     if (this.rota[2] === 'editar') {
       // this.modelo = this.form.value;
       this.form.setValue(await this.modelo_service.buscarModelo(this.rota[3]));
     }
-
   }
 
-  onSubmit() {
+  onSubmit(): void {
     if (this.form.valid && this.rota[2] === 'criar') {
       this.modelo_service.cadastrarModelo(this.form.value);
       this.router.navigate(['/modelos']);
@@ -53,8 +53,8 @@ export class FormModelComponent implements OnInit {
       this.router.navigate(['/modelos']);
     }
   }
-  
-  excluir() {
+
+  excluir(): void {
     if (confirm("Tem certeza que realmente deseja excluir?")) {
       this.modelo_service.excluirModelo(this.rota[3]);
       this.router.navigate(['/modelos']);

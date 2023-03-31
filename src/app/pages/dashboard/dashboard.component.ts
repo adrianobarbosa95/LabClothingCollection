@@ -12,12 +12,14 @@ import { ModeloService } from 'src/app/services/modelo.service';
 })
 
 export class DashboardComponent {
+
   colecoes!: Colecao[];
   modelos!: Modelo[];
   title: any;
   valor: any;
   comparacao: any;
   somaColecao: number = 0;
+
   constructor(private colecao: ColecaoService, private modelo: ModeloService, private real : RealPipe) {
     this.modelo.obterTodosModelos().then((res) =>
       this.modelos = res);
@@ -27,12 +29,7 @@ export class DashboardComponent {
       this.title = ['Coleções', 'Modelos', "Orçamento Médio (R$)"];
       this.valor = [this.colecoes.length, this.modelos.length, real.transform(((this.somaColecao / this.colecoes.length).toFixed(2)).toString(), true)];
       this.comparacao = [false, false, true];
-
     });
-
-
-
-
-
   }
+  
 }

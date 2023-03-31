@@ -1,64 +1,46 @@
-  <h2  *ngIf="rota =='dashboard'" class="subtitle-card subtitle-table">Maiores Orçamentos</h2>
+<h2 *ngIf="rota =='dashboard'" class="subtitle-card subtitle-table">Maiores Orçamentos</h2>
 <table class="table">
   <thead>
     <tr *ngIf="rota =='colecoes' || rota =='dashboard'">
-  
       <th scope="col">Coleção</th>
       <th scope="col">Responsável</th>
       <th scope="col">Estação - Lancamento</th>
       <th scope="col">Modelos</th>
       <th scope="col">Orçamento</th>
     </tr>
-
-
-
     <tr *ngIf="rota=='modelos'">
       <th scope="col">ModeloID</th>
       <th scope="col">Nome do Modelo</th>
       <th scope="col">Responsável</th>
       <th scope="col">Coleção</th>
     </tr>
-
-
-
   </thead>
   <tbody>
-
     <ng-container *ngIf="rota =='dashboard'">
-    <tr routerLink="/colecoes/editar/{{colecao.id}}" *ngFor="let colecao of colecoes" >
- 
-      <td>{{colecao.nome}}</td>
-      <td>{{colecao.responsavel}}</td>
-      <td>{{colecao.estacao}} {{colecao.ano}}</td>
-      <td>{{colecao.marca}}</td>  <!-- modelos -->
-      <td>{{colecao.orcamento | real }}</td>
-
-    </tr>
-    </ng-container>
-
-    <ng-container *ngIf="rota =='colecoes'">
-      <tr routerLink="/colecoes/editar/{{colecao.id}}" *ngFor="let colecao of colecoesCompletas" >
-   
+      <tr routerLink="/colecoes/editar/{{colecao.id}}" *ngFor="let colecao of colecoes">
         <td>{{colecao.nome}}</td>
         <td>{{colecao.responsavel}}</td>
         <td>{{colecao.estacao}} {{colecao.ano}}</td>
-        <td>{{colecao.marca}}</td>  <!-- modelos -->
-        <td>{{colecao.orcamento | real}}</td>
-  
+        <td>{{colecao.marca}}</td> <!-- modelos -->
+        <td>{{colecao.orcamento | real }}</td>
       </tr>
-      </ng-container>
- 
+    </ng-container>
+    <ng-container *ngIf="rota =='colecoes'">
+      <tr routerLink="/colecoes/editar/{{colecao.id}}" *ngFor="let colecao of colecoesCompletas">
+        <td>{{colecao.nome}}</td>
+        <td>{{colecao.responsavel}}</td>
+        <td>{{colecao.estacao}} {{colecao.ano}}</td>
+        <td>{{colecao.marca}}</td> <!-- modelos -->
+        <td>{{colecao.orcamento | real}}</td>
+      </tr>
+    </ng-container>
     <ng-container *ngIf="rota =='modelos'">
-      <tr routerLink="/modelos/editar/{{modelo.id}}" *ngFor="let modelo of modelos" >
-   
+      <tr routerLink="/modelos/editar/{{modelo.id}}" *ngFor="let modelo of modelos">
         <td>{{modelo.id}}</td>
         <td>{{modelo.nome}}</td>
         <td>{{modelo.responsavel}}</td>
         <td>{{modelo.colecao}}</td>
-     
- 
-        
       </tr>
-      </ng-container>
+    </ng-container>
   </tbody>
 </table>

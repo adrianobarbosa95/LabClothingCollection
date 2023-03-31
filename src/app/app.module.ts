@@ -19,8 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { UserPipe } from './pipes/user.pipe';
 import { RealPipe } from './pipes/real.pipe';
- 
- 
+
 
 
 @NgModule({
@@ -41,14 +40,14 @@ import { RealPipe } from './pipes/real.pipe';
     FormModelComponent,
     UserPipe,
     RealPipe,
- 
-    
+
+
   ],
   imports: [
     FormsModule, ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,  
+    HttpClientModule,
 
   ],
   providers: [UserPipe, RealPipe],

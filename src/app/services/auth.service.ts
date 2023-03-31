@@ -9,6 +9,7 @@ import { Usuario } from '../models/usuario';
   providedIn: 'root'
 })
 export class AuthService {
+  
   usuario!: Usuario[];
   url = 'http://localhost:3000/usuarios';
   private local = localStorage;
