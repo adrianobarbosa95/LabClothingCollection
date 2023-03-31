@@ -16,7 +16,6 @@ export class FormCollectionComponent implements OnInit {
   form!: FormGroup;
   colecao!: Colecao;
   rota: any;
-
   myModal: any;
 
 

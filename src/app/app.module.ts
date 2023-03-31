@@ -17,7 +17,6 @@ import { FormCollectionComponent } from './components/form-collection/form-colle
 import { FormModelComponent } from './components/form-model/form-model.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { DbService } from './services/db.service';
 import { UserPipe } from './pipes/user.pipe';
 import { RealPipe } from './pipes/real.pipe';
  
@@ -52,7 +51,7 @@ import { RealPipe } from './pipes/real.pipe';
     HttpClientModule,  
 
   ],
-  providers: [DbService, UserPipe, RealPipe],
+  providers: [UserPipe, RealPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
