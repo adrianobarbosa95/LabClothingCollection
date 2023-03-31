@@ -21,7 +21,7 @@
         <td>{{colecao.nome}}</td>
         <td>{{colecao.responsavel}}</td>
         <td>{{colecao.estacao}} {{colecao.ano}}</td>
-        <td>{{colecao.marca}}</td> <!-- modelos -->
+        <td>{{totalModelosbyIdColecao(colecao.id)}}</td> <!-- modelos -->
         <td>{{colecao.orcamento | real }}</td>
       </tr>
     </ng-container>
@@ -30,7 +30,7 @@
         <td>{{colecao.nome}}</td>
         <td>{{colecao.responsavel}}</td>
         <td>{{colecao.estacao}} {{colecao.ano}}</td>
-        <td>{{colecao.marca}}</td> <!-- modelos -->
+        <td>{{totalModelosbyIdColecao(colecao.id)}}</td> <!-- modelos -->
         <td>{{colecao.orcamento | real}}</td>
       </tr>
     </ng-container>
@@ -39,7 +39,7 @@
         <td>{{modelo.id}}</td>
         <td>{{modelo.nome}}</td>
         <td>{{modelo.responsavel}}</td>
-        <td>{{modelo.colecao}}</td>
+        <td>{{buscarColecaoById(modelo.colecao)}}</td>
       </tr>
     </ng-container>
   </tbody>

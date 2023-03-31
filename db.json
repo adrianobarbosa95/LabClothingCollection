@@ -4,7 +4,7 @@
       "nome": "Nike Revolution 6",
       "tipo": "calçados",
       "responsavel": "Adriano Barbosa",
-      "colecao": "Revolution",
+      "colecao": "1",
       "bordado": "Sim",
       "estampa": "Não",
       "id": 1
@@ -13,7 +13,7 @@
       "nome": "Biquíni Citric",
       "tipo": "biquini",
       "responsavel": "Andrew Samuel",
-      "colecao": "Redenção",
+      "colecao": "5",
       "bordado": "Sim",
       "estampa": "Não",
       "id": 2
@@ -22,7 +22,7 @@
       "nome": "Swetos",
       "tipo": "camisa",
       "responsavel": "David Dolares",
-      "colecao": "Invictos",
+      "colecao": "4",
       "bordado": "Sim",
       "estampa": "Sim",
       "id": 3
@@ -31,7 +31,7 @@
       "nome": "Brics ",
       "tipo": "bolsa",
       "responsavel": "Laerte Chiachietto",
-      "colecao": "Revolution",
+      "colecao": "1",
       "bordado": "Sim",
       "estampa": "Sim",
       "id": 4
@@ -42,7 +42,7 @@
       "nome": "Revolution",
       "responsavel": "Adriano Barbosa",
       "estacao": "Verão",
-      "orcamento": 897007,
+      "orcamento": 89707,
       "ano": 2023,
       "marca": "Nike",
       "id": 1
@@ -51,7 +51,7 @@
       "nome": "Redenção",
       "responsavel": "Luciana Souza",
       "estacao": "Verão",
-      "orcamento": 200000,
+      "orcamento": 20000,
       "ano": 2024,
       "marca": "Riachuelo",
       "id": 2
@@ -60,7 +60,7 @@
       "nome": "Invictos",
       "responsavel": "Lucas de Souza",
       "estacao": "Inverno",
-      "orcamento": 1500000,
+      "orcamento": 15000,
       "ano": 2024,
       "marca": "Shein",
       "id": 3
@@ -69,7 +69,7 @@
       "nome": "DIOR AND DUNCAN",
       "responsavel": "Larissa Duarte",
       "estacao": "Verão",
-      "orcamento": 987525,
+      "orcamento": 98525,
       "ano": 2023,
       "marca": "Christian Dior",
       "id": 4
@@ -78,7 +78,7 @@
       "nome": "Way and Way",
       "responsavel": "Zenaide Barbosa",
       "estacao": "Outuno",
-      "orcamento": 978325,
+      "orcamento": 97835,
       "ano": 2023,
       "marca": "C&A",
       "id": 5
@@ -87,7 +87,7 @@
       "nome": "E2E",
       "responsavel": "Patricys Ygor",
       "estacao": "Primavera",
-      "orcamento": 350000,
+      "orcamento": 35000,
       "ano": 2023,
       "marca": "Marvel",
       "id": 6
@@ -109,6 +109,15 @@
       "ano": 2026,
       "marca": "Nike",
       "id": 8
+    },
+    {
+      "nome": "teste",
+      "responsavel": "teste",
+      "estacao": "tweste",
+      "orcamento": 12345,
+      "ano": 11551,
+      "marca": "yteste",
+      "id": 9
     }
   ],
   "usuarios": [

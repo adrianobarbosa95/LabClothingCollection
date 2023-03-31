@@ -25,4 +25,12 @@ export class TableBudgetComponent {
     this.rota = this.router.url.split('/')[1];
   }
 
+  buscarColecaoById(id: string): string {
+    const colecao = this.colecoes.find(colecao => colecao.id === Number(id));
+    return colecao?.nome ?? '';
+
+  }
+  totalModelosbyIdColecao(idColecao: number): number {
+    return this.modelos.filter(modelo => modelo.colecao === idColecao.toString()).length;
+  }
 }
