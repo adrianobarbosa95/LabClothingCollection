@@ -1,9 +1,9 @@
 # LAB CLOTHING COLLECTION {#lab}
  
 <br>
-![capa]()
+ 
 
-[![Video do projeto](https://user-images.githubusercontent.com/28482965/229371355-abb8c60c-e408-4af3-917e-6cd169e57233.png" https://drive.google.com/file/d/1cgFnZejx4PAkel1c265_QpmqjyNH7L27/view?usp=drivesdk")
+[![Video do projeto]("https://user-images.githubusercontent.com/28482965/229371355-abb8c60c-e408-4af3-917e-6cd169e57233.png" https://drive.google.com/file/d/1cgFnZejx4PAkel1c265_QpmqjyNH7L27/view?usp=drivesdk")
 
 <br>
 
