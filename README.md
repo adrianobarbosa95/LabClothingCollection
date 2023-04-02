@@ -1,9 +1,10 @@
-# LAB CLOTHING COLLECTION {#lab}
+# LAB CLOTHING COLLECTION
  
 <br>
  
-![Home](https://user-images.githubusercontent.com/28482965/229372438-1226e4ba-76f4-4a81-af7b-a79b660e3dc4.png)
-
+ 
+![image](https://user-images.githubusercontent.com/28482965/229373035-afa27ea7-ab5c-46a9-8226-98c0042960f2.png)
+Dados genericos.
 
 <br>
 
@@ -167,4 +168,4 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 Quer fazer parte desse projeto? adrianobarbosa95@gmail.com
 
 
-[⬆ Voltar ao topo](#lab)<br>
+[⬆ Voltar ao topo](#)<br>
