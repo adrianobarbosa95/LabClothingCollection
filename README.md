@@ -1,7 +1,10 @@
 # LAB CLOTHING COLLECTION 
  
+<br>
 
 [![Alternate Text](https://drive.google.com/file/d/1cgFnZejx4PAkel1c265_QpmqjyNH7L27/view?usp=drivesdk)](https://drive.google.com/file/d/1cgFnZejx4PAkel1c265_QpmqjyNH7L27/view?usp=drivesdk "https://drive.google.com/file/d/1cgFnZejx4PAkel1c265_QpmqjyNH7L27/view?usp=drivesdk")
+
+<br>
 
 > Projeto apresentado ao curso de qualificação profissional da DevinHouse - Audaces, como requisito avaliativo do Módulo 1. 
 
@@ -115,8 +118,29 @@ Tela principal com dados trazidos da base de dados, composto por tres cards do m
 
 Item da tabela de maiores orçamento são ordenados pelo valor decrescente dos orçamentos da coleção, e apenas 5 são exibidos, cada item ao clikar e redirecionado para edição da coleção clikada.
  
-  
-## 🤝 Colaboradores
+  ## 🚀 Coleções
+
+Tela de listar, cadastrar e editar coleções:
+
+<br> 
+
+Na tela de listagem, será exibida uma tabela com itens da base de dados, de todas as coleções cadastradas, e bem como um botão para cadastro. O botão Coleções do Menu lateral abre o componente de formulario, que por sua vez ao ser totalmente preenchido e ao clicar em salva, adiciona uma novo coleção na base de dados. 
+
+Ao clicar em um item da lista de coleção é redirecionado a tela de editar, onde ao clicar em cancela retorna a tela dasboard, enquanto o botão salvar, adiciona os dados na base de dados, na tela de editar é exibido um botão de excluir. Onde a coleção é exluida da base de dados. 
+
+
+  ## 🚀 Modelo
+
+Tela de listar, cadastrar e editar modelos:
+
+<br> 
+
+Na tela de listagem, será exibida uma tabela com itens da base de dados, de todos modelos cadastrados, e bem como um botão para cadastro. O botão Modelos do menu lateral abre o componente de formulario, que por sua vez ao ser totalmente preenchido e ao clicar em salva, adiciona uma novo coleção na base de dados. 
+
+Ao clicar em um item da lista de modelos é redirecionado a tela de editar, onde ao clicar em cancela retorna a tela dasboard, enquanto o botão salvar, adiciona os dados na base de dados, na tela de editar é exibido um botão de excluir. Onde a coleção é exluida da base de dados.  
+
+
+ 🤝 Colaboradores
 
 Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
