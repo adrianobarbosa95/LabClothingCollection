@@ -13,6 +13,7 @@ import { ModeloService } from 'src/app/services/modelo.service';
   styleUrls: ['./table-budget.component.scss']
 })
 export class TableBudgetComponent {
+  
   colecoes!: Colecao[];
   colecoesCompletas!: Colecao[];
   modelos!: Modelo[];
@@ -28,8 +29,8 @@ export class TableBudgetComponent {
   buscarColecaoById(id: string): string {
     const colecao = this.colecoes.find(colecao => colecao.id === Number(id));
     return colecao?.nome ?? '';
-
   }
+  
   totalModelosbyIdColecao(idColecao: number): number {
     return this.modelos.filter(modelo => modelo.colecao === idColecao.toString()).length;
   }

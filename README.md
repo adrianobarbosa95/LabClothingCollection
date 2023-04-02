@@ -1,29 +1,143 @@
-# LabClothingCollection
+# LAB CLOTHING COLLECTION 
+ 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
+[![Alternate Text](https://drive.google.com/file/d/1cgFnZejx4PAkel1c265_QpmqjyNH7L27/view?usp=drivesdk)](https://drive.google.com/file/d/1cgFnZejx4PAkel1c265_QpmqjyNH7L27/view?usp=drivesdk "https://drive.google.com/file/d/1cgFnZejx4PAkel1c265_QpmqjyNH7L27/view?usp=drivesdk")
 
-## Development server
+> Projeto apresentado ao curso de qualificação profissional da DevinHouse - Audaces, como requisito avaliativo do Módulo 1. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+<br>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### O projeto
 
-## Build
+<br>
+ LAB Clothing Collection, um software audacioso para gestão de coleções de moda no setor de vestuário. E suas principais telas são:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<br>
 
-## Running unit tests
+- [x] Tela de Login
+- [x] Tela de Esqueci a Senha
+- [x] Tela de Cadastro de Usuário
+- [x] Tela de Dashboard
+- [x] Tela de Listagem de Coleções
+- [x] Tela de Cadastro de Coleção
+- [x] Tela de Edição de Coleção
+- [x] Tela de Listagem de Modelos
+- [x] Tela de Cadastro de Modelos
+- [x] Tela de Edição de Modelos
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 💻 Pré-requisitos
 
-## Running end-to-end tests
+Antes de começar, verifique se você atendeu aos seguintes requisitos:
+<!---Estes são apenas requisitos de exemplo. Adicionar, duplicar ou remover conforme necessário--->
+* Criou cadastro de usuario `<localhost/cadastro>`
+* Realizou login `<localhost/login>`.
+* Caso tenha esquecido a senha, clique em redefinir senha na tela de login `<localhost/redefinir>`.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<br>
 
-## Further help
+## 🚀 Tela de Login
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Na tela de login informar suas crendencias de entrada:
 
-https://trello.com/invite/b/HSulI4AP/ATTIae1ba18bc79f23f790856fb6f2289534AB2B9248/lab-clothing-collection
+<br> 
+
+Preencha com seu email cadastrado:
+```
+user.name@provedor.br
+```
+
+Preencha com sua senha cadastrada, minimo de 8 caracteres:
+```
+I234567@
+```
+ 
+Caso tenha esquecido a senha click em `esqueci a senha`.
+caso não possua cadastro clique em `cadastre-se`.
+
+
+
+<br>
+
+## 🚀 Tela de Esqueci a Senha
+
+Na tela de Esqueci a Senha informar seu email e clikar em `Enviar Recuperação`:
+
+<br> 
+
+Preencha com seu email cadastrado:
+```
+user.name@provedor.br
+```
+
+Clique em `Enviar Recuperção` e o link chegar em seu email cadastrado.
+
+
+
+## 🚀 Tela de Cadastro de Usuário
+
+Na tela de cadastro de usuario, deve ser preenchido todos os campos. Um novo usuario do sistema necessita preencher os dados do formulario reativo para poder se autenticar posteriomente. Todos os formularios, utlizam o FormGrup, com validação, e o FormControl.
+
+<br> 
+
+Nome:
+```
+ex: Adriano Barosa
+```
+
+Empresa:
+```
+Ex. Terra Bahiana
+```
+
+CNPJ - Mínimo de 14 digitos:
+```
+12345678901234
+```
+
+SENHA - Mínimo de 8 gigitos:
+```
+12345678
+```
+
+CONFIRMAR SENHA - deve ser identica a senha:
+```
+12345678
+```
+
+Clique em `Criar conta`para finalizar o cadastrado.
+
+## 🚀 Tela de DashBoard
+
+Tela principal com dados trazidos da base de dados, composto por tres cards do mesmo componente, onde os dados são alterados por condicionais. E uma tabela de coleçoes, e um menu lateral e um navbar superior com a opção de deslogar.
+
+<br> 
+
+Item da tabela de maiores orçamento são ordenados pelo valor decrescente dos orçamentos da coleção, e apenas 5 são exibidos, cada item ao clikar e redirecionado para edição da coleção clikada.
+ 
+  
+## 🤝 Colaboradores
+
+Agradecemos às seguintes pessoas que contribuíram para este projeto:
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/28482965?v=4" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
+        <sub>
+          <b>Adriano Barbosa</b>
+        </sub>
+      </a>
+    </td>
+    
+  </tr>
+</table>
+
+
+## 😄 Seja um dos contribuidores <br>
+
+Quer fazer parte desse projeto? adrianobarbosa95@gmail.com
+
+
+[⬆ Voltar ao topo](#labclothingcollection)<br>

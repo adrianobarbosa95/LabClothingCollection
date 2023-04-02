@@ -10,7 +10,7 @@
       "id": 1
     },
     {
-      "nome": "Biquíni Citric",
+      "nome": "Biquíni",
       "tipo": "biquini",
       "responsavel": "Andrew Samuel",
       "colecao": "5",
@@ -109,15 +109,6 @@
       "ano": 2026,
       "marca": "Nike",
       "id": 8
-    },
-    {
-      "nome": "teste",
-      "responsavel": "teste",
-      "estacao": "tweste",
-      "orcamento": 12345,
-      "ano": 11551,
-      "marca": "yteste",
-      "id": 9
     }
   ],
   "usuarios": [
