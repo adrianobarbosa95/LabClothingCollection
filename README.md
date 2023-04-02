@@ -2,8 +2,8 @@
  
 <br>
  
+![Home](https://user-images.githubusercontent.com/28482965/229372438-1226e4ba-76f4-4a81-af7b-a79b660e3dc4.png)
 
-[![Video do projeto]("https://user-images.githubusercontent.com/28482965/229371355-abb8c60c-e408-4af3-917e-6cd169e57233.png" https://drive.google.com/file/d/1cgFnZejx4PAkel1c265_QpmqjyNH7L27/view?usp=drivesdk")
 
 <br>
 
@@ -158,6 +158,8 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     
   </tr>
 </table>
+
+[![Video do projeto](https://user-images.githubusercontent.com/28482965/229372353-69828807-ce14-49c0-a51c-be4e12792cfa.png)]( https://drive.google.com/file/d/1cgFnZejx4PAkel1c265_QpmqjyNH7L27/view?usp=drivesdk)
 
 
 ## 😄 Seja um dos contribuidores <br>
